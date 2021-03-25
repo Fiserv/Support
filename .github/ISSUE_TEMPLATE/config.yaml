@@ -1,0 +1,9 @@
+
+blank_issues_enabled: true
+contact_links:
+  - name: 🎥 Video Playlist 
+    url: https://www.youtube.com/
+    about: View the examples on YouTube
+  - name: #️⃣ Slack Us
+    url:
+    about: Join the Slack workspace to learn more!
