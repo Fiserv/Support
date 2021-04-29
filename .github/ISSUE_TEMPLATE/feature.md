@@ -19,3 +19,17 @@ A clear and concise description of any alternative solutions or features you've 
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
+
+<!-- ** Recommended ** 
+
+- Assign a Feature 
+
+    On you right hand side, you can set an Assignees by Clicking setting button next to it.
+
+- Subscribe to a Team
+
+    At the end of your Feature template, please mention team you would like to subscribe for this Issue for future updates. You can mention teams in Github 
+    
+    Example:  @Fiserv/fiserv-developer)
+
+-->

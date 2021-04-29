@@ -56,7 +56,7 @@ Add any other context about the problem here.
 
 - Subscribe to a Team
 
-    At the end of your Bug template, please mention team you would like to suscribe for this Issue for future updates. You can mention teams in Github 
+    At the end of your Bug template, please mention team you would like to subscribe for this Issue for future updates. You can mention teams in Github 
     
     Example:  @Fiserv/fiserv-developer)
 
