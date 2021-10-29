@@ -1,6 +1,6 @@
 # Support
 
-Welcome to the Fiserv Developer Portal Support page.
+Welcome to the Fiserv Developer Studio Support page.
 
 Create issues on the [Issues](https://github.com/fiserv/support/issues) tab or join in the discussions happneing in the [Discussions](https://github.com/fiserv/support/discussions) tab.
 
