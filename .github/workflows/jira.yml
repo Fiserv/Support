@@ -1,0 +1,44 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Jira Login
+        # You may pin to the exact commit or the version.
+        # uses: atlassian/gajira-login@90a599561baaf8c05b080645ed73db7391c246ed
+        uses: atlassian/gajira-login@v2.0.0
+
+      - name: Jira Create issue
+        # You may pin to the exact commit or the version.
+        # uses: atlassian/gajira-create@c0a9c69ac9d6aa063fed57201e55336ada860183
+        uses: atlassian/gajira-create@v2.0.1
+        with:
+          # Key of the project
+          project: 
+          # Type of the issue to be created. Example: 'Incident'
+          issuetype: 
+          # Issue summary
+          summary: 
+          # Issue description
+          description: # optional
+          # Additional fields in JSON format
+          fields: # optional
