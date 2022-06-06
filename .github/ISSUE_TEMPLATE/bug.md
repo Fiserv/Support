@@ -10,7 +10,7 @@ assignees: ''
 # Reporting new issue for [NAME] (Tenant/Product)
 
 **Region** (if applicable)
-A region of a user reporting the bug.
+The region of a user reporting the bug.
 
 **Page**
 Path of the page where the problem exists.
