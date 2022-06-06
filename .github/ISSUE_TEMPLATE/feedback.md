@@ -9,7 +9,7 @@ assignees: ''
 ---
 
 **Region** (optional)
-A region of a user submitting the feedback.
+The region of a user submitting the feedback.
 
 **What do you like about the project?**
 A clear and concise description of what you like about the project.
