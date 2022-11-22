@@ -1,15 +1,93 @@
 ---
 name: ✅ request to onboard a new tenant
-title: 'New tenant Onboarding'
+about: New tenant Onboarding
+title: 'Tenant Onboarding'
 labels:
     - Onboard New Tenant
 assignees: 'sfiserv'
 
 ---
 
-<h2>Name of the product / tenant:</h2>
--Provide the name of the product as would appear on Developer Studio
+## Name of the product / tenant:
+Provide the name of the product as would appear on Developer Studio
 
-<h2>Type of Tenant:</h2>
-This is really***very***important text.
+## Type of Tenant:
+Specify the type of integration needed. Is it Full service, Doc Only or Link Out ?
+
+## GitHub Essentials:
+These are required for Developer Studio team to create the GitHub repository.
+
+### Team members:
+Provide the GitHub usernames registered with Fiserv email address.
+
+### Suppport contacts: 
+Provide fiserv email addresses below
+   - Bug Reporting:
+      Assignees: tony.stark@fiserv.com, captain.america@fiserv.com
+   - Feedback Reporting:
+      Assignees: tony.stark@fiserv.com, captain.america@fiserv.com
+   - Enhancement Reporting:
+      Assignees: tony.stark@fiserv.com, captain.america@fiserv.com 
+
+## Studio Essentials:
+These are required for Developer Studio team to create the GitHub repository.
+
+### External Link:
+Provide the external link to your product or developer portal if you chose "Link Out" as the "Type of tenant"
+
+### Internal: 
+Is this product only for Fiserv's Internal use. Answer 'Yes / No'. If not sure please leave it as 'No'
+
+### Carat:
+Is it a product of Fiserv's carat solutions. Answer 'Yes / No'. If not sure please leave it as 'No'
+
+### Solution Areas: 
+Which Solution would your product fit into? 
+- Merchants:
+        SMB: Yes / No
+        Enterprise: Yes / No
+- Financial instustions:
+        Banks: Yes / No
+        Credit Untions: Yes / No
+        Large financial instutitions: Yes / No
+- Fintech: Yes/No
+
+### Filter Tags:
+Specify tags to filter your product
+#### Region of Operation:
+   - North America: Yes / No
+   - EMEA: Yes / No
+   - LATAM: Yes / No
+   - APAC: Yes / No
+      
+#### Integration:
+   - restful: Yes
+   > Developer Studio needs restful APIs for integration.
+   - sdk: Yes / No
+
+#### Industry:
+What industry sectors does your product target? 
+Example: "Retail", "Banking", "Petroleum"
+
+## Runbox Essentials:
+Below information is required for the running the APIs on Developer Studio
+
+### Runbox:
+Do you want to enable the run box feature? Answer "Yes / No". 
+
+> If the preceding response is "Yes," continue filling out the below sections:
+
+#### Type of Sandbox:
+- Mock : Yes / No
+- Live: Yes / No 
+
+> Please note that the Live sandbox setting overrules mock setting. Developer Studio team will later connect with you to collect Live server connectivity details.
+
+> If Live sandbox is not ready at your end, Developer Studio will provide a Mock server for your APIs. For that please change the above value of 'Mock' to 'Yes'.
+
+
+
+
+
+
 
