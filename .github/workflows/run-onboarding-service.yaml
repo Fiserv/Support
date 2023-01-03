@@ -7,3 +7,9 @@ on:
       - labeled
     label:
       - 'Onboard New Tenant'
+
+jobs:
+  Tenant-Service:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
