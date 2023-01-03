@@ -1,0 +1,9 @@
+name: Calling Remote onBoarding Service
+
+on:
+  issues:
+    types:
+      - opened
+      - labeled
+    label:
+      - 'Onboard New Tenant'
