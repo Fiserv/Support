@@ -77,8 +77,8 @@ body:
         label: Internal Tenant
         description: Is this product only for Fiserv's internal use? If not sure, please select 'No'
         options:
-         - Yes
-         - No
+         - "Yes"
+         - "No"
     validations:
       required: true
         
