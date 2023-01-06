@@ -23,14 +23,12 @@ body:
     validations:
       required: true
   - type: checkboxes
-    id: Tenant Type
+    id: Tenant-Type
     attributes:
       label: Type of Tenant
       description: Specify the type of integration required.
       options:
-        - Full Service
-        - Doc Only
-        - Link out
+      - label: Full Service
     validations:
       required: true
   - type: dropdown
