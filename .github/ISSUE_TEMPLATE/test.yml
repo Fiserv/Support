@@ -1,0 +1,62 @@
+name: Onboard Tenant
+description: New tenant onboarding
+title: 'Tenant Onboarding'
+labels:
+    - Onboard New Tenant
+assignees: 'sfiserv'
+body:
+  - type: markdown
+    attributes:
+      value: | 
+        
+        ---
+        
+        Thank you for taking the time to submit the Onboarding Form. To seemlessly onboard you, we need some information.
+  - type: input
+    id: Name Of Product
+    attributes:
+      label: Name of your product / tennat
+      description: "Provide the name of the product as would appear on Developer Studio"
+      placeholder: "ABC Product"
+    validations:
+      required: true
+   - type: checkbox
+    id: Tenant Type
+    attributes:
+      label: Type of Tenant
+      description: "Specify the type of integration required."
+      options:
+        - Full Service
+        - Doc Only
+        - Link out
+    validations:
+      required: true  
+  - type: dropdown
+    id: location
+    attributes:
+      label: Project Location
+      description: Where is the project located?
+      options:
+        - Local
+        - Remote
+        - Somewhere else (please specify in the description!)
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which steps do we need to take to reproduce this error?
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: If applicable, provide relevant log output. No need for backticks here.
+      render: shell
