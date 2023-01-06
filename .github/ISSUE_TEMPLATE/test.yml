@@ -42,17 +42,51 @@ body:
     validations:
       required: true
   - type: input
-    id: Support-Contacts
-    attributes:
-      label: Support Contacts
-      description: Provide the GitHub usernames registered with Fiserv email address.
-  - type: input
     id: Bug-Reporting
     attributes:
-      label: Bug Reporting Assignees
-      placeholder: tonyStark01
+      label: Bug Reporting
+      description: Provide the GitHub usernames registered with Fiserv email address.
+      placeholder: tonyStark01, wanda01
     validations:
       required: true
+  - type: input
+    id: Feedback-Reporting
+    attributes:
+      label: Feedback Reporting
+      description: Provide the GitHub usernames registered with Fiserv email address.
+      placeholder: thor01, tonyStark01
+    validations:
+      required: true
+  - type: input
+    id: Enhancement-Reporting
+    attributes:
+      label: Enhancement Reporting
+      description: Provide the GitHub usernames registered with Fiserv email address.
+      placeholder: tonyStark01, loki01
+    validations:
+      required: true
+  - type: input
+    id: External-Link
+    attributes:
+      label: External Link
+      description: Provide rge external link to your product/developer portal if you have chosen 'Link out' as the 'Type of Tenant'
+      placeholder: https://www.fiserv.com
+  - type: dropdown
+    id: Internal-Tenant
+    attributes:
+        label: Internal Tenant
+        description: Is this product only for Fiserv's internal use? If not sure, please select 'No'
+        options:
+         - Yes
+         - No
+    validations:
+      required: true
+        
+      
+      
+      
+      
+      
       
       
     
