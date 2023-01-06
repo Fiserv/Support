@@ -28,7 +28,9 @@ body:
       label: Type of Tenant
       description: Specify the type of integration required.
       options:
-      - label: Full Service
+      - label: Full service
+      - label: Doc only
+      - label: Link out
     validations:
       required: true
   - type: dropdown
