@@ -8,10 +8,12 @@ assignees: sfiserv
 body:
   - type: markdown
     attributes:
-      value: >
+      value: |
+        Before opening a bug report, please search for the behaviour in the existing issues. 
+        
         ---
-
-        Thank you for taking the time to submit the Onboarding Form. To seamlessly onboard you, we need some information.
+        
+        Thank you for taking the time to file a bug report. To address this bug as fast as possible, we need some information.
   - type: input
     id: Name Of Product
     attributes:
