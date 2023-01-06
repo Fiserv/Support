@@ -68,19 +68,36 @@ body:
   - type: input
     id: External-Link
     attributes:
-      label: External Link
-      description: Provide rge external link to your product/developer portal if you have chosen 'Link out' as the 'Type of Tenant'
+      label: External link
+      description: Provide external url to your product/developer portal if you have chosen 'Link out' as the 'Type of Tenant'
       placeholder: https://www.fiserv.com
   - type: dropdown
     id: Internal-Tenant
     attributes:
-        label: Internal Tenant
+        label: Internal tenant
         description: Is this product only for Fiserv's internal use? If not sure, please select 'No'
         options:
          - "Yes"
          - "No"
-    validations:
-      required: true
+  - type: dropdown
+    id: Carat
+    attributes:
+        label: Product of Carat
+        description: Is this product for Fiserv's Carat Solutions? If not sure, please select 'No'
+        options:
+         - "Yes"
+         - "No"
+  - type: markdown
+    attributes:
+      value: Solution Areas
+  - type: dropdown
+    id: Merchants-Customer-Segments
+    attributes:
+        label: Customer Segments of Merchants
+        description: Is this product for Fiserv's Carat Solutions? If not sure, please select 'No'
+        options:
+         - "Yes"
+         - "No"
         
       
       
