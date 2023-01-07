@@ -194,17 +194,18 @@ body:
       
   - type: markdown
     attributes:
-      value: <h4><b> Type of Sandbox </h4><b> |
+      value: <h4> Type of Sandbox </h4> |
         
         ---
-            <I>Please note that the Live sandbox setting overrules mock setting. Developer Studio team will later connect with you to collect Live server connectivity details.
+        
+        <I>Please note that the Live sandbox setting overrules mock setting. Developer Studio team will later connect with you to collect Live server connectivity details.
       
           If Live sandbox is not ready at your end, Developer Studio will provide a Mock server for your APIs. For that please change the above value of 'Mock' to 'Yes'. </I>
       
   - type: dropdown
     id: mock
     attributes:
-      label: Mock
+      label: Mock Sandbox
       description:
       options:
         - "Yes"
@@ -213,7 +214,7 @@ body:
   - type: dropdown
     id: live
     attributes:
-      label: Live
+      label: Live Server
       description:
       options:
         - "Yes"
