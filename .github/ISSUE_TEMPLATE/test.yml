@@ -194,7 +194,7 @@ body:
       
   - type: markdown
     attributes:
-      value: Type of Sandbox
+      value: #### Type of Sandbox
       
   - type: dropdown
     id: mock
