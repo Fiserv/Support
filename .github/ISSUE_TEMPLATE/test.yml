@@ -182,15 +182,12 @@ body:
     id: runbox
     attributes:
       label: Runbox
-      description: Do you want to enable the RunBox feature?
+      description: Do you want to enable the RunBox feature? If the preceding response is "Yes," continue filling out the below questions
       options:
         - "Yes"
         - "No"
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: If the preceding response is "Yes," continue filling out the below questions
       
   - type: markdown
     attributes:
