@@ -160,6 +160,8 @@ body:
       description: Developer Studio needs restful APIs for integration
       options:
         - "Yes"
+    validations:
+      required: true
   - type: dropdown
     id: integration-sdk
     attributes:
@@ -168,40 +170,11 @@ body:
       options:
         - "Yes"
         - "No"
-  
-      
-      
-      
-      
-      
-      
-      
-    
-  - type: dropdown
-    id: location
-    attributes:
-      label: Project Location
-      description: Where is the project located?
-      options:
-        - Local
-        - Remote
-        - Somewhere else (please specify in the description!)
     validations:
       required: true
   - type: textarea
-    id: bug-description
+    id: industry
     attributes:
-      label: Bug description
-      description: What happened?
-    
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to reproduce
-      description: Which steps do we need to take to reproduce this error?
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: If applicable, provide relevant log output. No need for backticks here.
-      render: shell
+      label: Industry
+      description: Which sectors of industry does your product serve? You can mention utp five industries or less.
+      placeholder: "Examples: Retail, Banking, Petroleum, Airline, Manufacturing"
