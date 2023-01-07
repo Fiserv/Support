@@ -159,15 +159,15 @@ body:
       label: RESTful
       description: Developer Studio needs restful APIs for integration
       options:
-        - Yes
+        - "Yes"
   - type: dropdown
     id: integration-sdk
     attributes:
       label: SDK
       description: Choose if you need SDKs for integration
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
   
       
       
