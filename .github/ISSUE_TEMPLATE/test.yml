@@ -9,11 +9,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before opening a bug report, please search for the behaviour in the existing issues. 
+        
         
         ---
         
-        Thank you for taking the time to file a bug report. To address this bug as fast as possible, we need some information.
+        Thank you for taking the time to submit the Tenant Onboarding form. To seemlessly onboard you, we need some information.
   - type: input
     id: Name-Of-Product
     attributes:
@@ -126,7 +126,7 @@ body:
     validations:
       required: true
     attributes:
-      label: Customer Segments for Merchants
+      label: Customer Segments for Financial Instituitions
       description: Specify the type of integration required.
       options:
        - label: Bank
@@ -142,39 +142,22 @@ body:
          - "No"
     validations:
       required: true
-      
-      
-      
-      
-      
-      
-      
-    
-  - type: dropdown
-    id: location
-    attributes:
-      label: Project Location
-      description: Where is the project located?
-      options:
-        - Local
-        - Remote
-        - Somewhere else (please specify in the description!)
+  - type: checkboxes
+    id: region-of-operation
     validations:
       required: true
-  - type: textarea
-    id: bug-description
     attributes:
-      label: Bug description
-      description: What happened?
-    
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to reproduce
-      description: Which steps do we need to take to reproduce this error?
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: If applicable, provide relevant log output. No need for backticks here.
-      render: shell
+      label: Region of Operation
+      description: Select your product's operational region. 
+      options:
+       - label: North America
+       - label: EMEA
+       - label: LATAM
+       - label: APAC
+
+      
+      
+      
+      
+      
+     
