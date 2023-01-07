@@ -190,4 +190,32 @@ body:
       required: true
   - type: markdown
     attributes:
-      value: If the preceding response is "Yes," continue filling out the below questiones
+      value: If the preceding response is "Yes," continue filling out the below questions
+      
+  - type: markdown
+    attributes:
+      value: Type of Sandbox
+      
+  - type: dropdown
+    id: mock
+    attributes:
+      label: Mock
+      description:
+      options:
+        - "Yes"
+        - "No"
+        
+  - type: dropdown
+    id: live
+    attributes:
+      label: Live
+      description:
+      options:
+        - "Yes"
+        - "No"
+        
+  - type: markdown
+    attributes:
+      value: Please note that the Live sandbox setting overrules mock setting. Developer Studio team will later connect with you to collect Live server connectivity details.
+      
+          If Live sandbox is not ready at your end, Developer Studio will provide a Mock server for your APIs. For that please change the above value of 'Mock' to 'Yes'.
