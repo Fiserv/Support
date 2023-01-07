@@ -176,5 +176,18 @@ body:
     id: industry
     attributes:
       label: Industry
-      description: Which sectors of industry does your product serve? You may only list up to five different industries.
+      description: Which sectors of industry does your product serve? You may only list up to five different industries. 
       placeholder: "Examples: Retail, Banking, Petroleum, Airline, Manufacturing"
+  - type: dropdown
+    id: runbox
+    attributes:
+      label: Runbox
+      description: Do you want to enable the RunBox feature?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: If the preceding response is "Yes," continue filling out the below questiones
