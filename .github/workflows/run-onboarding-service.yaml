@@ -20,3 +20,4 @@ jobs:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             # This is assuming that you are triggering off the issue, otherwise you will need to know the issue number
             issue_id: 259
+            payload: yaml
