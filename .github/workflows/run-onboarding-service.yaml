@@ -1,6 +1,7 @@
 name: Calling Remote onBoarding Service
 
 on:
+  workflow_call:
   issues:
     types:
       - opened
