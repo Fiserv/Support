@@ -13,3 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Issue Body Parser
+        uses: peter-murray/issue-body-parser-action@v2
+        id: issue_body_parser
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            # This is assuming that you are triggering off the issue, otherwise you will need to know the issue number
+            issue_id: 259
