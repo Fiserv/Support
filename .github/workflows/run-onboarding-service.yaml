@@ -4,15 +4,17 @@ on:
   workflow_call:  
   issues:
     types:
-      - opened
       - labeled
 
 jobs:
-  Tenant-Service:
+  Tenant-Onboarding-Process:
+    if: github.event.label.name == 'Onboard New Tenant'
     runs-on: ubuntu-latest
+    if: 
     steps:
       - name: View issue information
         run: |
-          echo "Issue title ${{ github.event.issue }}"
-          echo "Issue body ${{ github.event.issue.body }} "
+          echo "Issue title: ${{ github.event.issue }}"
+          echo "Issue No: ${{ github.event.issue.number }}"
+          echo "Issue body: ${{ github.event.issue.body }}"
     
