@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: View issue information
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event.issue.title }}."
+    - run: echo "🎉 The job was automatically triggered by a ${{ github.event.issue.title }}."
