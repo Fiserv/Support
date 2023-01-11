@@ -12,4 +12,7 @@ jobs:
   Tenant-Service:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+    - name: View issue information
+    run: |
+    echo "Issue title: ${{ github.event.issue.title }}"
+    echo "Issue body: ${{ github.event.issue.body }}"
