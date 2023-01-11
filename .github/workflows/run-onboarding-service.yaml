@@ -10,7 +10,6 @@ jobs:
   Tenant-Onboarding-Process:
     if: github.event.label.name == 'Onboard New Tenant'
     runs-on: ubuntu-latest
-    if: 
     steps:
       - name: View issue information
         run: |
