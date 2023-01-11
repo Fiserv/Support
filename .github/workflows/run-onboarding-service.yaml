@@ -1,14 +1,9 @@
-name: Calling Remote onBoarding Service
+name: OnBoarding_Service
 
 on:
-  issues:
-    push:
-      branches: [ main ]
-    types:
-      - opened
-      - labeled
-    label:
-      - 'Onboard New Tenant'
+  workflow_call:  
+  push:
+    branches: [ main ]
 
 jobs:
   Tenant-Service:
