@@ -2,8 +2,10 @@ name: OnBoarding_Service
 
 on:
   workflow_call:  
-  push:
-    branches: [ main ]
+  issues:
+    types:
+      - opened
+      - labeled
 
 jobs:
   Tenant-Service:
