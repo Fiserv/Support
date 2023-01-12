@@ -13,7 +13,38 @@ jobs:
     steps:
       - name: View issue information
         run: |
+          echo "🎉 The job automatically triggered by a ${{ github.event_name }} event."
           echo "Issue title: ${{ github.event.issue }}"
           echo "Issue No: ${{ github.event.issue.number }}"
           echo "Issue body: ${{ github.event.issue.body }}"
-    
+      - name: Creating new Temp sub dir 'service'
+        run:  |
+         mkdir -m 777 service
+         cd service
+         pwd
+         ls -la
+      - name: Checkout /Fiserv/tenant-onboarding Repo at ${{ github.workspace }}/service
+        uses: actions/checkout@v3
+        with:
+         repository: Fiserv/tenant-onboarding
+         ref: develop
+         path: ${{ github.workspace }}/service
+      - name: List files in the repository
+        run: |
+         cd ${{ github.workspace }}
+         pwd
+         ls -la
+         cd ${{ github.workspace }}/service
+         pwd
+         ls -la
+      - run: echo "💡 The Fiserv/tenant-onboarding repository has been cloned on root"
+      - run: echo "🖥️ The workflow is now ready to run Onboarding service on the runner." 
+      - name: List files in the repository
+        run: |
+         pwd
+         ls -la             
+      # - name: Running Tenant Generator.....
+      #   run: |
+      #     pwd
+      #     cd ${{ github.workspace }}/service/scripts
+      #     ls -la    
