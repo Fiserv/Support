@@ -43,8 +43,26 @@ jobs:
         run: |
          pwd
          ls -la             
-      # - name: Running Tenant Generator.....
-      #   run: |
-      #     pwd
-      #     cd ${{ github.workspace }}/service/scripts
-      #     ls -la    
+      - name: Running Tenant Generator.....
+        run: |
+          pwd
+          cd ${{github.workspace}}/service/scripts
+          ls -la
+          npmv=$(npm --version)
+          echo "NPM version installed : " $npmv
+          nodev=$(node --version)
+          echo "Node version installed : " $nodev
+          npm install
+          echo " Repo: ${{ github.repository }}"
+          echo " Space: ${{ github.workspace }}"
+          result=$(npm run start 279)
+          echo "**********TEST RESULTS*********************"
+          echo "$result"
+          if [[ $result == *'FAILED'* ]] ;then
+          echo "Onboarding config writer failed and exiting the Job..."
+          exit 1
+          elif [[ $result == *'PASSED'* ]] ;then
+          echo "Onboarding config writer Ran Successfully....🍏"
+          fi          
+        #run: ./startup.sh -f '-rthe'
+      - run: echo "🍏 This job's status is ${{ job.status }}."
