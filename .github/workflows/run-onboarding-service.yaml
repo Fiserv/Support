@@ -67,7 +67,7 @@ jobs:
         #run: ./startup.sh -f '-rthe'
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Push tenant.json file to New Teanant Repository
-        uses: nkoppel/push-files-to-another-repository@1.1.2
+        uses: nkoppel/push-files-to-another-repository@v1.1.1
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
