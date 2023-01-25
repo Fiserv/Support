@@ -55,7 +55,7 @@ jobs:
           npm install
           echo " Repo: ${{ github.repository }}"
           echo " Space: ${{ github.workspace }}"
-          result=$(npm run start 279)
+          result=$(npm run start ${{ github.event.issue.number }})
           echo "**********TEST RESULTS*********************"
           echo "$result"
           if [[ $result == *'FAILED'* ]] ;then
