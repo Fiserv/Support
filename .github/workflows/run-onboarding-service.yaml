@@ -71,7 +71,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-files: '${{github.workspace}}/service/tenant.json'
+          source-files: '${{github.workspace}}/tenant.json'
           destination-username: 'Fiserv'
           destination-repository: 'RustTenant'
           destination-directory: 'RustTenant/config'
