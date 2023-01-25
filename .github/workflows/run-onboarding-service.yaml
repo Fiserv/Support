@@ -70,6 +70,7 @@ jobs:
           pwd
           cd ${{github.workspace}}/service
           pwd
+          ls -la
       - name: Push tenant.json file to New Teanant Repository
         uses: nkoppel/push-files-to-another-repository@v1.1.1
         env:
