@@ -63,23 +63,12 @@ jobs:
           exit 1
           elif [[ $result == *'PASSED'* ]] ;then
           echo "Onboarding config writer Ran Successfully....🍏"
-          fi          
-        #run: ./startup.sh -f '-rthe'
+          fi  
+          ./startup.sh -f '-rthe'
+        #run: ./startup.sh -f '-rthe'  
       - run: |
           echo "🍏 This job's status is ${{ job.status }}."
           pwd
           cd ${{github.workspace}}/service
           pwd
           ls -la
-      - name: Push tenant.json file to New Teanant Repository
-        uses: nkoppel/push-files-to-another-repository@v1.1.1
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source-files: '${{github.workspace}}/service/tenant.json'
-          destination-username: 'Fiserv'
-          destination-repository: 'RustTenant'
-          destination-directory: 'RustTenant/config'
-          destination-branch: 'develop'
-          commit-email: 'abhishek.singh3@fiserv.com'
-          commit-message: 'Pushing Tenant.json file to new Teannt Repo'
