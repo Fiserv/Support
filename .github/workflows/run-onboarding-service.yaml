@@ -73,7 +73,7 @@ jobs:
         with:
           source-files: '${{github.workspace}}/service/tenant.json'
           destination-username: 'Fiserv'
-          destination-repository: 'Fiserv/RustTenant'
+          destination-repository: 'RustTenant'
           destination-directory: 'RustTenant/config'
           destination-branch: 'develop'
           commit-email: 'abhishek.singh3@fiserv.com'
