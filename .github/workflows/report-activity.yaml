@@ -10,7 +10,8 @@ jobs:
   guthub_User_activity:
     runs-on: ubuntu-latest
     steps:
-      - name: User_activity 
+      - name: User_activity
+        id: analyze_user_activity
         uses: peter-murray/inactive-users-action@v1
         with:
          #repository: ${{ github.repository }}
@@ -19,9 +20,9 @@ jobs:
          organization: Fiserv
          activity_days: 90
 
-# - name: Save User Activity Report
-#   uses: actions/upload-artifact@v2
-#   with:
-#     name: reports
-#     path: |
-#       ${{ steps.analyze_user_activity.outputs./.github/report_cvs.txt}}
+      - name: Save User Activity Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: reports
+          path: |
+            ${{ steps.analyze_user_activity.outputs.report_csv}}
