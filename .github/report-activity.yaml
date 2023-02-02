@@ -1,0 +1,14 @@
+- name: Analyze User Activity
+  id: analyze_user_activity
+  uses: peter-murray/inactive-users-action@v1
+  with:
+    token: ${{ secrets.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 }}
+    organization: Fiserv
+    activity_days: 90
+
+- name: Save User Activity Report
+  uses: actions/upload-artifact@v2
+  with:
+    name: reports
+    path: |
+      ${{ steps.analyze_user_activity.outputs.report_csv }}
