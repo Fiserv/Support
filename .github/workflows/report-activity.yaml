@@ -15,7 +15,7 @@ jobs:
         with:
          #repository: ${{ github.repository }}
          #path: ${{ github.workspace }}
-         token: ${{secrets.API_TOKEN_GITHUB }}
+         token: ${{secrets.GIT_GITHUB }}
          organization: Fiserv
          activity_days: 90
 
