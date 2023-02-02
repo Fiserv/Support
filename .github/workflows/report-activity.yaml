@@ -1,14 +1,24 @@
-- name: Analyze User Activity
-  id: analyze_user_activity
-  uses: peter-murray/inactive-users-action@v1
-  with:
-    token: ${{ secrets.Fiserv_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}}
-    organization: Fiserv
-    activity_days: 90
+name: Guthub User activity
 
-- name: Save User Activity Report
-  uses: actions/upload-artifact@v2
-  with:
-    name: reports
-    path: |
-      ${{ steps.analyze_user_activity.outputs./.github/report_cvs.txt}}
+on:
+  workflow_call:  
+
+jobs:
+  guthub_User_activity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: User_activity 
+        uses: peter-murray/inactive-users-action@v1
+        with:
+         repository: ${{ github.repository }}
+         path: ${{ github.workspace }}
+         token: ${{secrets.API_TOKEN_GITHUB }}
+         organization: Fiserv
+         activity_days: 90
+
+# - name: Save User Activity Report
+#   uses: actions/upload-artifact@v2
+#   with:
+#     name: reports
+#     path: |
+#       ${{ steps.analyze_user_activity.outputs./.github/report_cvs.txt}}
