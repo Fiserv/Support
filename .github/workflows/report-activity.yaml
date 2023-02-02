@@ -13,9 +13,9 @@ jobs:
       - name: User_activity 
         uses: peter-murray/inactive-users-action@v1
         with:
-         repository: ${{ github.repository }}
-         path: ${{ github.workspace }}
-         #token: ${{secrets.API_TOKEN_GITHUB }}
+         #repository: ${{ github.repository }}
+         #path: ${{ github.workspace }}
+         token: ${{secrets.API_TOKEN_GITHUB }}
          organization: Fiserv
          activity_days: 90
 
