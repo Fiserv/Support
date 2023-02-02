@@ -2,7 +2,7 @@
   id: analyze_user_activity
   uses: peter-murray/inactive-users-action@v1
   with:
-    token: ${{ secrets.}}
+    token: ${{ secrets.Fiserv_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}}
     organization: Fiserv
     activity_days: 90
 
@@ -11,4 +11,4 @@
   with:
     name: reports
     path: |
-      ${{ steps.analyze_user_activity.outputs.github/report-cvs.txt}}
+      ${{ steps.analyze_user_activity.outputs./.github/report_cvs.txt}}
