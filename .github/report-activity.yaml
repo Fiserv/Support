@@ -2,7 +2,7 @@
   id: analyze_user_activity
   uses: peter-murray/inactive-users-action@v1
   with:
-    token: ${{ secrets.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 }}
+    token: ${{ secrets.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}}
     organization: Fiserv
     activity_days: 90
 
