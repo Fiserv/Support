@@ -1,5 +1,5 @@
 ---
-name: Onboard Tenant
+name: TENANT-NAME
 description: New tenant onboarding
 title: Tenant Onboarding
 labels:
@@ -18,7 +18,7 @@ body:
     attributes:
       label: Name of your product / tenant
       description: Provide the name of the product as would appear on Developer Studio
-      placeholder: ABC-Product
+      placeholder: TENANT-NAME
     validations:
       required: true
   - type: checkboxes
