@@ -64,7 +64,7 @@ jobs:
           elif [[ $result == *'PASSED'* ]] ;then
           echo "Onboarding config writer Ran Successfully....🍏"
           cd ${{ github.workspace }}/service
-          tenant=$(./startup.sh -f '-rthe')
+          tenant=$(./startup.sh -f '-rthde')
           echo "tenant"
           fi  
       - run: |
