@@ -14,7 +14,7 @@ jobs:
       - name: View issue information
         run: |
           echo "🎉 The job automatically triggered by a ${{ github.event_name }} event."
-          echo "Issue title: ${{ github.event.issue }}"
+          echo "Issue title: ${{ github.event.issue.title }}"
           echo "Issue No: ${{ github.event.issue.number }}"
           echo "Issue body: ${{ github.event.issue.body }}"
       - name: Creating new Temp sub dir 'service'
@@ -66,11 +66,22 @@ jobs:
           cd ${{ github.workspace }}/service
           tenant=$(./startup.sh -f '-rthe')
           echo "tenant"
-          fi
-        #run: ./startup.sh -f '-rthe'  
+          fi  
       - run: |
           echo "🍏 This job's status is ${{ job.status }}."
           pwd
-          cd ${{github.workspace}}/service
+          cd ${{github.workspace}}
           pwd
           ls -la
+      - name: Pushing tenant file remotely
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_KEY_GITHUB }}
+        with:
+          source_file: '${{github.workspace}}/tenant.json'
+          destination_repo: 'Fiserv/${{ github.event.issue.title }}'
+          destination_folder: 'config'
+          destination_branch: 'develop'
+          user_email: 'abhishek.singh3@fiserv.com'
+          user_name: 'asingh2023'
+          commit_message: 'pushing tenant json file remotely'           
