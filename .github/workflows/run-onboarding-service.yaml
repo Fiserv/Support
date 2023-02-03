@@ -67,12 +67,12 @@ jobs:
           tenant=$(./startup.sh -f '-rthde')
           echo "tenant"
           fi  
-      - run: |
-          echo "🍏 This job's status is ${{ job.status }}."
-          pwd
-          cd ${{github.workspace}}
-          pwd
-          ls -la
+#       - run: |
+#           echo "🍏 This job's status is ${{ job.status }}."
+#           pwd
+#           cd ${{ github.workspace }}/service
+#           pwd
+#           ls -la
       - name: Pushing tenant file remotely
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
