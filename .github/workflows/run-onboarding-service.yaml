@@ -44,6 +44,7 @@ jobs:
          pwd
          ls -la             
       - name: Running Tenant Generator.....
+        id: build
         run: |
           pwd
           cd ${{github.workspace}}/service/scripts
@@ -55,13 +56,14 @@ jobs:
           npm install
           echo " Repo: ${{ github.repository }}"
           echo " Space: ${{ github.workspace }}"
-          result=$(npm run start ${{ github.event.issue.number }})
-          echo "**********TEST RESULTS*********************"
+          result=$(node service.js ${{ github.event.issue.number }})
+          echo "********** TENANT CONFIGURATION *********************"
           echo "$result"
           if [[ $result == *'FAILED'* ]] ;then
           echo "Onboarding config writer failed and exiting the Job..."
           exit 1
-          elif [[ $result == *'PASSED'* ]] ;then
+          else
+          echo "TENANT="$result >> $GITHUB_OUTPUT          
           echo "Onboarding config writer Ran Successfully....🍏"
           cd ${{ github.workspace }}/service
           tenant=$(./startup.sh -f '-rthde')
@@ -79,7 +81,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_KEY_GITHUB }}
         with:
           source_file: '${{github.workspace}}/service/tenant.json'
-          destination_repo: 'Fiserv/${{ github.event.issue.title }}'
+          destination_repo: 'Fiserv/${{steps.build.outputs.TENANT}}'
           destination_folder: 'config'
           destination_branch: 'develop'
           user_email: 'abhishek.singh3@fiserv.com'
@@ -91,7 +93,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_KEY_GITHUB }}
         with:
-          source_file: '${{github.workspace}}/service/dbscripts/${{github.event.issue.title }}_dev_db_script.js'
+          source_file: '${{github.workspace}}/service/dbscripts/${{steps.build.outputs.TENANT}}_dev_db_script.js'
           destination_repo: 'Fiserv/tenants-data'
           destination_folder: 'dbscripts'
           destination_branch: 'main'
