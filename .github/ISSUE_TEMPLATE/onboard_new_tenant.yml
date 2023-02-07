@@ -114,7 +114,7 @@ body:
     id: Product-Areas-Financial-Institutions
     attributes:
         label: Financial Institutions solution area
-        description: Does you product fall under Financial Institutions category?
+        description: Does your product fall under Financial Institutions category?
         options:
          - "Yes"
          - "No"
@@ -135,7 +135,7 @@ body:
     id: Product-Areas-Fintech
     attributes:
         label: Fintech solution area
-        description: Does you product fall under Fintech category?
+        description: Does your product fall under Fintech category?
         options:
          - "Yes"
          - "No"
