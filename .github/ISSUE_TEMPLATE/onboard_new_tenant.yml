@@ -37,7 +37,7 @@ body:
     attributes:
       label: Team Members
       description: Provide the GitHub usernames registered with Fiserv email address.
-      placeholder: tonyStark01
+      placeholder: tonyStark01, wanda01
     validations:
       required: true
   - type: input
@@ -106,7 +106,7 @@ body:
       required: true
     attributes:
       label: Customer Segments for Merchants
-      description: Specify the type of integration required.
+      description: Specify the type of segement. Required if you selected Merchants above.
       options:
       - label: SMB
       - label: Enterprise
@@ -126,7 +126,7 @@ body:
       required: true
     attributes:
       label: Customer Segments for Financial Instituitions
-      description: Specify the type of integration required.
+      description: Specify the type of segement. Required if you selected Financial Institutions above.
       options:
        - label: Bank
        - label: Credit Union
@@ -157,7 +157,7 @@ body:
     id: integration-restful
     attributes:
       label: RESTful
-      description: Developer Studio needs restful APIs for integration
+      description: Do you provide restful APIs for integration
       options:
         - "Yes"
     validations:
@@ -166,7 +166,7 @@ body:
     id: integration-sdk
     attributes:
       label: SDK
-      description: Choose if you need SDKs for integration
+      description: Do you provide SDKs for integration
       options:
         - "Yes"
         - "No"
