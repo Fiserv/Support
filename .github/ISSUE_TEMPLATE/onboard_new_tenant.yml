@@ -12,7 +12,7 @@ body:
         
         ---
         
-        Thank you for taking the time to submit the Tenant Onboarding form. To seemlessly onboard you, we need some information. Kindly review our onboarding documents before submitting this form - https://fiserv.github.io/tenants-doc/ for common questions.
+        Thank you for taking the time to submit the Tenant Onboarding form. To seemlessly onboard you, we need some information. Kindly review our onboarding documents before submitting this form - https://fiserv.gitbook.io/tenant-docs/ for common questions.
   - type: input
     id: Name-Of-Product
     attributes:
