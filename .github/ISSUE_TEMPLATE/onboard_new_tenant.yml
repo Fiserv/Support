@@ -76,9 +76,8 @@ body:
         label: Internal tenant
         description: Is this product only for Fiserv's internal use? If not sure, please select 'No'
         options:
-         - "Yes"
          - "No"
-        default: "No" 
+         - "Yes"
     validations:
       required: true
   - type: dropdown
@@ -87,8 +86,8 @@ body:
         label: Product of Carat
         description: Is this product for Fiserv's Carat Solutions? If not sure, please select 'No'
         options:
-         - "Yes"
          - "No"
+         - "Yes"
     validations:
       required: true
   - type: dropdown
