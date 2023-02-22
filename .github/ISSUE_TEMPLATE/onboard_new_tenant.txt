@@ -3,7 +3,7 @@ name: ✅ request to onboard a new tenant
 about: New tenant Onboarding
 title: 'Tenant Onboarding'
 labels:
-    - Onboard New Tenant
+
 assignees: 'sfiserv'
 
 ---
