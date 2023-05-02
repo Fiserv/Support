@@ -1,11 +1,11 @@
 name: Guthub User activity
 
 on:
+  schedule:
+    - cron: '* * * * *'
   workflow_call:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  schedule:
-    - cron: '0 15 2 * *' 
 
 jobs:
   guthub_User_activity:
