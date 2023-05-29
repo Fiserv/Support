@@ -2,7 +2,6 @@ name: 🐞 Bug report
 description: File a bug report
 labels:
   - bug
-assignees: ''
 body:
   - type: markdown
     attributes:
