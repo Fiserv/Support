@@ -1,5 +1,11 @@
 ---
 name: 🐞 Bug report
+about: |
+  Before opening a bug report, please search for the behaviour in the existing issues. 
+
+  ---
+
+  Thank you for taking the time to file a bug report. To address this bug as fast as possible, we need some information.
 description: File a bug report
 labels:
   - bug
