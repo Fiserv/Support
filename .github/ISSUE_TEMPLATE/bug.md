@@ -1,5 +1,5 @@
 ---
-name: Deprecated Bug Report Page
+name: --Deprecated Bug Report Page--
 about: Deprecated - links to new bug report
 ---
 
