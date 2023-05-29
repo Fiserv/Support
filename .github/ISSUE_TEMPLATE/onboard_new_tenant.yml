@@ -1,7 +1,7 @@
 ---
 name: TENANT-NAME
 description: New tenant onboarding
-title: TENANT-NAME
+title: Onboard a new tenant
 labels:
   - Onboard New Tenant
 assignees: sfiserv
