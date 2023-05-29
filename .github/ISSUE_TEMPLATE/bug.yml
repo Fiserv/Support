@@ -57,7 +57,7 @@ body:
       placeholder: "Google Chrome 113.0.5672.92"
     validations:
       required: true
-    - type: input
+  - type: input
     id: region
     attributes:
       label: Region
