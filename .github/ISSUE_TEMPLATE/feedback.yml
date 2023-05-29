@@ -1,0 +1,19 @@
+name: 🎙️ Feedback
+description: Provide feedback for this project
+labels:
+  - feedback
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: "What do you like or not like about Developer Studio?"
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Region
+      description: "What is the region this bug happens in?"
+    validations:
+      required: false
