@@ -57,3 +57,10 @@ body:
       placeholder: "Google Chrome 113.0.5672.92"
     validations:
       required: true
+    - type: input
+    id: region
+    attributes:
+      label: Region
+      description: "What is the region this bug happens in?"
+    validations:
+      required: false
