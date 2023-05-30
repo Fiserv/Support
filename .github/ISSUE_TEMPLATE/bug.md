@@ -1,4 +1,5 @@
 ---
 name: --DEPRECATED BUG REPORT--
-about: Please 'choose a different type -->' and select 🐞 Bug report
+about: Please use 🐞 Bug report below
+title: Please 'choose a different type' to go back and select 🐞 Bug report
 ---
