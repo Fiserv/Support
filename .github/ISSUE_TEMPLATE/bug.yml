@@ -16,7 +16,7 @@ body:
     attributes:
       label: Tenant
       description: "Is this bug related to or for a specific tenant on Developer Studio?"
-      placeholder: "Commerce Hub, Banking Hub, etc."
+      placeholder: "e.g. Commerce Hub, Banking Hub, etc."
     validations:
       required: false
   - type: input
@@ -24,7 +24,7 @@ body:
     attributes:
       label: Page
       description: "On which page do you see the bug?"
-      placeholder: "Account -> Data & Privacy"
+      placeholder: "e.g. Account -> Data & Privacy"
     validations:
       required: true
   - type: textarea
@@ -46,7 +46,7 @@ body:
     attributes:
       label: Operating system
       description: "Which operating system do you use? Please provide the version as well."
-      placeholder: "macOS Big Sur 11.5.2"
+      placeholder: "e.g. macOS Big Sur 11.5.2"
     validations:
       required: true
   - type: input
@@ -54,7 +54,7 @@ body:
     attributes:
       label: Browser
       description: "Which browser do you use? Please provide the version as well."
-      placeholder: "Google Chrome 113.0.5672.92"
+      placeholder: "e.g. Google Chrome 113.0.5672.92"
     validations:
       required: true
   - type: input
