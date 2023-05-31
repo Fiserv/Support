@@ -6,16 +6,18 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before opening a bug report, please search for the behaviour in the existing issues. If this is related to Banking Hub, please contact them directly at appmarketsupport@fiserv.com
+        Before opening a bug report, please search for the behaviour in the existing issues. 
+        
+        If this is related to Banking Hub, please contact them directly at appmarketsupport@fiserv.com
         
         ---
         
         Thank you for taking the time to file a bug report. To address this bug as fast as possible, we need some information.
   - type: input
-    id: tenant
+    id: product
     attributes:
-      label: Tenant
-      description: "Is this bug related to or for a specific tenant on Developer Studio?"
+      label: Product
+      description: "Is this bug related to or for a specific product on Developer Studio?"
       placeholder: "e.g. Commerce Hub, Banking Hub, etc."
     validations:
       required: false
