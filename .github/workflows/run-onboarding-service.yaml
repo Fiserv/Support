@@ -12,11 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: View issue information
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
         run: |
           echo "🎉 The job automatically triggered by a ${{ github.event_name }} event."
-          echo "Issue title: ${{ github.event.issue.title }}"
+          echo "Issue title: $ISSUE_TITLE"
           echo "Issue No: ${{ github.event.issue.number }}"
-          echo "Issue body: ${{ github.event.issue.body }}"
+          echo "Issue body: $ISSUE_BODY"
       - name: Creating new Temp sub dir 'service'
         run:  |
          mkdir -m 777 service
