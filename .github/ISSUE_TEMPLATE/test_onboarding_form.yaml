@@ -1,0 +1,233 @@
+---
+name: TEST FORM
+description: This is a test form -- Please do not use this form
+title: Onboard a new tenant
+labels:
+  -
+assignees: TaniaS
+body:
+  - type: markdown
+    attributes:
+      value: |
+        
+        ---
+        
+        Thank you for taking the time to submit the Tenant Onboarding form. To seemlessly onboard you, we need some information. Kindly review our onboarding documents before submitting this form - https://fiserv.gitbook.io/tenant-docs/ for common questions.
+  - type: input
+    id: Name-Of-Product
+    attributes:
+      label: Name of your product / tenant
+      description: Provide the name of the product as would appear on Developer Studio
+      placeholder: TENANT-NAME
+    validations:
+      required: true
+  - type: dropdown
+    id: Tenant-Type
+    attributes:
+        label: Type of Tenant
+        description: Specify the type of integration required.
+        options:
+         - "Full service"
+         - "Doc only"
+         - "Link out"
+    validations:
+      required: true
+  - type: checkboxes
+    id: Tenant-Type
+    validations:
+      required: true
+    attributes:
+      label: Type of Tenant
+      description: Specify the type of integration required.
+      options:
+      - label: Full service
+      - label: Doc only
+      - label: Link out
+  - type: input
+    id: Team-Members
+    attributes:
+      label: Team Members
+      description: Provide the GitHub usernames registered with Fiserv email address.
+      placeholder: tonyStark01, wanda01
+    validations:
+      required: true
+  - type: input
+    id: Bug-Reporting
+    attributes:
+      label: Bug Reporting
+      description: Provide the GitHub usernames registered with Fiserv email address.
+      placeholder: tonyStark01, wanda01
+    validations:
+      required: true
+  - type: input
+    id: Feedback-Reporting
+    attributes:
+      label: Feedback Reporting
+      description: Provide the GitHub usernames registered with Fiserv email address.
+      placeholder: thor01, tonyStark01
+    validations:
+      required: true
+  - type: input
+    id: Enhancement-Reporting
+    attributes:
+      label: Enhancement Reporting
+      description: Provide the GitHub usernames registered with Fiserv email address.
+      placeholder: tonyStark01, loki01
+    validations:
+      required: true
+  - type: input
+    id: External-Link
+    attributes:
+      label: External link
+      description: Provide external url to your product/developer portal if you have chosen 'Link out' as the 'Type of Tenant'
+      placeholder: https://www.fiserv.com
+  - type: dropdown
+    id: Internal-Tenant
+    attributes:
+        label: Internal tenant
+        description: Is this product only for Fiserv's internal use? If not sure, please select 'No'
+        options:
+         - "No"
+         - "Yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: Carat
+    attributes:
+        label: Product of Carat
+        description: Is this product for Fiserv's Carat Solutions? If not sure, please select 'No'
+        options:
+         - "No"
+         - "Yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: Product-Areas-Merchants
+    attributes:
+        label: Merchants solution area
+        description: Does you product fall under Merchants category?
+        options:
+         - "Yes"
+         - "No"
+    validations:
+      required: true
+  - type: checkboxes
+    id: customer-segments-for-merchants
+    validations:
+      required: true
+    attributes:
+      label: Customer Segments for Merchants
+      description: Specify the type of segement. Required if you selected Merchants above.
+      options:
+      - label: SMB
+      - label: Enterprise
+  - type: dropdown
+    id: Product-Areas-Financial-Institutions
+    attributes:
+        label: Financial Institutions solution area
+        description: Does your product fall under Financial Institutions category?
+        options:
+         - "Yes"
+         - "No"
+    validations:
+      required: true
+  - type: checkboxes
+    id: customer-segments-for-financial-institutions
+    validations:
+      required: true
+    attributes:
+      label: Customer Segments for Financial Instituitions
+      description: Specify the type of segement. Required if you selected Financial Institutions above.
+      options:
+       - label: Bank
+       - label: Credit Union
+       - label: Large Financial Institution
+  - type: dropdown
+    id: Product-Areas-Fintech
+    attributes:
+        label: Fintech solution area
+        description: Does your product fall under Fintech category?
+        options:
+         - "Yes"
+         - "No"
+    validations:
+      required: true
+  - type: checkboxes
+    id: region-of-operation
+    validations:
+      required: true
+    attributes:
+      label: Region of Operation
+      description: Select your product's operational region. 
+      options:
+       - label: North America
+       - label: EMEA
+       - label: LATAM
+       - label: APAC
+  - type: dropdown
+    id: integration-restful
+    attributes:
+      label: RESTful
+      description: Do you provide restful APIs for integration
+      options:
+        - "Yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: integration-sdk
+    attributes:
+      label: SDK
+      description: Do you provide SDKs for integration
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    id: industry
+    attributes:
+      label: Industry
+      description: Which sectors of industry does your product serve? You may only list up to five different industries. 
+      placeholder: "Examples: Retail, Banking, Petroleum, Airline, Manufacturing"
+  - type: dropdown
+    id: runbox
+    attributes:
+      label: Runbox
+      description: Do you want to enable the RunBox feature? If the preceding response is "Yes," continue filling out the below questions
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+      
+  - type: markdown
+    attributes:
+      value: <h4> Type of Sandbox </h4>
+        
+        
+        
+        <I> Please note that the Live sandbox setting overrules mock setting. Developer Studio team will later connect with you to collect Live server connectivity details.
+      
+          If Live sandbox is not ready at your end, Developer Studio will provide a Mock server for your APIs. For that please change the above value of 'Mock' to 'Yes'. </I>
+      
+  - type: dropdown
+    id: mock
+    attributes:
+      label: Mock Sandbox
+      description:
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+        
+  - type: dropdown
+    id: live
+    attributes:
+      label: Live Server
+      description:
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
