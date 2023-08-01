@@ -21,6 +21,7 @@ body:
       placeholder: TENANT-NAME
     validations:
       required: true
+      
   - type: dropdown
     id: Tenant-Type
     attributes:
@@ -36,92 +37,103 @@ body:
   - type: input
     id: External-Link
     attributes:
-      label: External link
-      description: Provide external url to your product/developer portal if you have chosen 'Link out' as the 'Type of Tenant'
+      label: External link to your Developer Portal
+      description: Provide an External link to your Developer Portal ONLY if you have selected 'Link out' as the 'Type of Tenant'.
       placeholder: https://www.fiserv.com
+      
   - type: dropdown
     id: Internal-Tenant
     attributes:
         label: Internal tenant
-        description: Is this product only for Fiserv's internal use? If not sure, please select 'No'
+        description: Is this product solely for Fiserv's internal use? If you are unsure, please choose 'No'.
         options:
          - "No"
          - "Yes"
     validations:
       required: true
+      
   - type: dropdown
     id: Carat
     attributes:
         label: Product of Carat
-        description: Is this product for Fiserv's Carat Solutions? If not sure, please select 'No'
+        description: Is this product for Fiserv's Carat Solutions? If you are unsure, please choose 'No'.
         options:
          - "No"
          - "Yes"
     validations:
       required: true
+      
   - type: dropdown
     id: Product-Areas-Merchants
     attributes:
         label: Merchants solution area
-        description: Does you product fall under Merchants category?
+        description: Does your product fit within the 'Merchants' category?
         options:
          - "Yes"
          - "No"
     validations:
       required: true
+      
   - type: checkboxes
     id: customer-segments-for-merchants
     validations:
       required: true
     attributes:
       label: Customer Segments for Merchants
-      description: Specify the type of segement. Required if you selected Merchants above.
+      description: Define the segment type. If you chose Merchants above, this field is required.
       options:
       - label: SMB
       - label: Enterprise
+      - label: All of the above
+      
   - type: dropdown
     id: Product-Areas-Financial-Institutions
     attributes:
         label: Financial Institutions solution area
-        description: Does your product fall under Financial Institutions category?
+        description: Does your product fit within the 'Financial Institutions' category?
         options:
          - "Yes"
          - "No"
     validations:
       required: true
+      
   - type: checkboxes
     id: customer-segments-for-financial-institutions
     validations:
       required: true
     attributes:
       label: Customer Segments for Financial Instituitions
-      description: Specify the type of segement. Required if you selected Financial Institutions above.
+      description: Define the segment type. If you chose Financial Institutions, this field is required.
       options:
        - label: Bank
        - label: Credit Union
        - label: Large Financial Institution
+       - label: All of the above
+       
   - type: dropdown
     id: Product-Areas-Fintech
     attributes:
         label: Fintech solution area
-        description: Does your product fall under Fintech category?
+        description:Does your product fit within the 'Fintech' category?
         options:
          - "Yes"
          - "No"
     validations:
       required: true
+      
   - type: checkboxes
     id: region-of-operation
     validations:
       required: true
     attributes:
       label: Region of Operation
-      description: Select your product's operational region. 
+      description: Choose the operational region for your product.
       options:
        - label: North America
-       - label: EMEA
-       - label: LATAM
-       - label: APAC
+       - label: Europe, the Middle East, and Africa
+       - label: Latin America
+       - label: Asia Pacific
+       
   - type: dropdown
     id: integration-restful
     attributes:
