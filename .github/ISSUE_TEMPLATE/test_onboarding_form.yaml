@@ -2,8 +2,8 @@
 name: TEST FORM
 description: This is a test form -- Please do not use this form
 title: Onboard a new tenant
-labels:
-  -
+# labels:
+#   -
 assignees: TaniaS
 body:
   - type: markdown
