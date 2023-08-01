@@ -32,17 +32,7 @@ body:
          - "Link out"
     validations:
       required: true
-  - type: checkboxes
-    id: Tenant-Type
-    validations:
-      required: true
-    attributes:
-      label: Type of Tenant
-      description: Specify the type of integration required.
-      options:
-      - label: Full service
-      - label: Doc only
-      - label: Link out
+  
   - type: input
     id: Team-Members
     attributes:
