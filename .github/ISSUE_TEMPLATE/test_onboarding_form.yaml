@@ -143,6 +143,7 @@ body:
         - "Yes"
     validations:
       required: true
+      
   - type: dropdown
     id: integration-sdk
     attributes:
@@ -153,17 +154,19 @@ body:
         - "No"
     validations:
       required: true
+      
   - type: textarea
     id: industry
     attributes:
       label: Industry
       description: Which sectors of industry does your product serve? You may only list up to five different industries. 
       placeholder: "Examples: Retail, Banking, Petroleum, Airline, Manufacturing"
+      
   - type: dropdown
     id: runbox
     attributes:
       label: Runbox
-      description: Do you want to enable the RunBox feature? If the preceding response is "Yes," continue filling out the below questions
+      description: Do you wish to use the RunBox function? If your response is "Yes," please continue by answering the following questions.
       options:
         - "Yes"
         - "No"
@@ -173,12 +176,9 @@ body:
   - type: markdown
     attributes:
       value: <h4> Type of Sandbox </h4>
-        
-        
-        
-        <I> Please note that the Live sandbox setting overrules mock setting. Developer Studio team will later connect with you to collect Live server connectivity details.
+        <I> Please note that the 'Live Sandbox' setting takes precedence over the 'Mock Sandbox' configuration. The Developer Studio Team will get in touch with you later to gather the specifics on Live Sandbox connectivity.
       
-          If Live sandbox is not ready at your end, Developer Studio will provide a Mock server for your APIs. For that please change the above value of 'Mock' to 'Yes'. </I>
+          If your Live sandbox is not yet ready, Developer Studio will initially provide you with a Mock server for your APIs. Please update the below value of 'Mock Sandbox' to 'YES' for this. </I>
       
   - type: dropdown
     id: mock
