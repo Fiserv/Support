@@ -143,30 +143,7 @@ body:
     id: has-apis
     attributes:
       label: Integrate APIs
-      value: <h4> Do you wish to use our portal to interate your APIs? </h4> <I> If you respond "Yes", then please continue to fill out the below sections: </I>
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
-  
-  - type: dropdown
-    id: integration-restful
-    attributes:
-      label: RESTful
-      description: Do you provide restful APIs for integration?
-      value: <I> Please note that we only support APIs with Open API Spec.
-        
-      options:
-        - "Yes"
-    validations:
-      required: true
-      
-  - type: dropdown
-    id: integration-sdk
-    attributes:
-      label: SDK
-      description: Do you provide SDKs for integration?
+      value: <h4> Do you wish to use our portal to interate your APIs? </h4> <I> Please note that we only support OpenAPI Specification.</I>
       options:
         - "Yes"
         - "No"
