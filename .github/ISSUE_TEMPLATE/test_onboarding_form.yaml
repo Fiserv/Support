@@ -139,7 +139,7 @@ body:
       description: Which sectors of industry does your product serve? You may only list up to five different industries. 
       placeholder: "Examples: Retail, Banking, Petroleum, Airline, Manufacturing"
       
-  - type: markdown
+  - type: dropdown
     id: has-apis
     attributes:
       label: Integrate APIs
