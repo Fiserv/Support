@@ -143,8 +143,7 @@ body:
     id: has-apis
     attributes:
       label: Integrate APIs
-      value: <h4> Do you wish to use our portal to interate your APIs? </h4>
-          <I> If you respond "Yes", then please continue to fill out the below sections: </I>
+      value: <h4> Do you wish to use our portal to interate your APIs? </h4> <I> If you respond "Yes", then please continue to fill out the below sections: </I>
       options:
         - "Yes"
         - "No"
