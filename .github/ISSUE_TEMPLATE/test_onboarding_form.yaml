@@ -79,10 +79,11 @@ body:
     attributes:
       label: Customer Segments for Merchants
       description: Define the segment type. If you chose Merchants above, this field is required.
+      required: true
       options:
       - label: SMB
       - label: Enterprise
-        required: true
+        
       
   - type: dropdown
     id: Product-Areas-Financial-Institutions
