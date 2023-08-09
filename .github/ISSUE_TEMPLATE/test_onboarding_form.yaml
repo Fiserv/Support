@@ -76,16 +76,13 @@ body:
       
   - type: checkboxes
     id: customer-segments-for-merchants
-    validations:
-      required: true
     attributes:
       label: Customer Segments for Merchants
       description: Define the segment type. If you chose Merchants above, this field is required.
       options:
       - label: SMB
       - label: Enterprise
-    validations:
-      required: true
+        required: true
       
   - type: dropdown
     id: Product-Areas-Financial-Institutions
@@ -100,8 +97,6 @@ body:
       
   - type: checkboxes
     id: customer-segments-for-financial-institutions
-    validations:
-      required: true
     attributes:
       label: Customer Segments for Financial Instituitions
       description: Define the segment type. If you chose Financial Institutions, this field is required.
