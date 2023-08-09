@@ -83,7 +83,6 @@ body:
       - label: SMB
         required: true
       - label: Enterprise
-        required: true
         
       
   - type: dropdown
