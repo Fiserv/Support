@@ -142,31 +142,30 @@ body:
   - type: input
     id: Team-Members
     attributes:
-      label: Team Members needed for creating Tenant repository in GitHub
-      description: Provide the GitHub usernames registered with Fiserv email address.
+      label: Members of your team who will need access to GitHub repository for your product
+      description: Provide the GitHub usernames <I>(registered with Fiserv email addresses)</I> of those who will need access to the Tenant repository.
       placeholder: tonyStark01, wanda01
     validations:
       required: true
   - type: input
     id: Enhancement-Reporting
     attributes:
-      label: Team Members needed for 'Enhancement Reporting' support issues
-      description: Provide the GitHub usernames registered with Fiserv email address.
+      label: Members of your team who will support with 'Enhancement Reporting' issues with your product.
+      description: Provide the GitHub usernames <I>(registered with your Fiserv email address)</I> for all 'Enhancement Reporting' issues for your product.
       placeholder: tonyStark01, loki01
     validations:
       required: true
   - type: input
     id: Bug-Reporting
     attributes:
-      label: Team Members needed for Bug Reporting
-      description: Provide the GitHub usernames registered with Fiserv email address.
-      placeholder: tonyStark01, wanda01
+      label: Members of your team who will support with 'Bug Reporting' issues with your product.
+      description: Provide the GitHub usernames <I>(registered with your Fiserv email address)</I> for all 'Bug Reporting' issues for your product.
     validations:
       required: true
   - type: input
     id: Feedback-Reporting
     attributes:
-      label: Feedback Reporting
+      label: Members of your team who will support with 'Feedback Reporting' issues with your product.
       description: Provide the GitHub usernames registered with Fiserv email address.
       placeholder: thor01, tonyStark01
     validations:
@@ -191,8 +190,6 @@ body:
       options:
         - "Yes"
         - "No"
-    validations:
-      required: true
       
   - type: markdown
     attributes:
@@ -209,8 +206,6 @@ body:
       options:
         - "Yes"
         - "No"
-    validations:
-      required: true
         
   - type: dropdown
     id: live
@@ -220,6 +215,5 @@ body:
       options:
         - "Yes"
         - "No"
-    validations:
-      required: true
+
 
