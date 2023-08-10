@@ -81,7 +81,6 @@ body:
       description: Define the segment type. If you chose Merchants above, this field is required.
       options:
       - label: SMB
-        required: true
       - label: Enterprise
         
       
@@ -136,7 +135,7 @@ body:
     id: industry
     attributes:
       label: Industry
-      description: Which sectors of industry does your product serve? You may only list up to five different industries. 
+      description: Which sectors of industry does your product serve? You may only list up to five different industries
       placeholder: "Examples: Retail, Banking, Petroleum, Airline, Manufacturing"
     validations:
       required: true
@@ -152,7 +151,7 @@ body:
   - type: input
     id: Enhancement-Reporting
     attributes:
-      label: Members of your team who will support with 'Enhancement Reporting' issues for your product.
+      label: Members of your team who will support with 'Enhancement Reporting' issues for your product
       description: Provide the GitHub usernames <I>(registered with your Fiserv email address)</I>
       placeholder: tonyStark01, loki01
     validations:
@@ -160,14 +159,14 @@ body:
   - type: input
     id: Bug-Reporting
     attributes:
-      label: Members of your team who will support with 'Bug Reporting' issues for your product.
+      label: Members of your team who will support with 'Bug Reporting' issues for your product
       description: Provide the GitHub usernames <I>(registered with your Fiserv email address)</I>
     validations:
       required: true
   - type: input
     id: Feedback-Reporting
     attributes:
-      label: Members of your team who will support with 'Feedback Reporting' issues for your product.
+      label: Members of your team who will support with 'Feedback Reporting' issues for your product
       description: Provide the GitHub usernames <I>(registered with your Fiserv email address)</I>
       placeholder: thor01, tonyStark01
     validations:
