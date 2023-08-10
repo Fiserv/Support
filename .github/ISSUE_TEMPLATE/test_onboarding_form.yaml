@@ -207,18 +207,18 @@ body:
     id: mock
     attributes:
       label: Mock Sandbox
-      description: Mock Sandbox
+      description: Do you need a Mock server for your product?
       options:
-        - "Yes"
         - "No"
+        - "Yes"
         
   - type: dropdown
     id: live
     attributes:
       label: Live Server
-      description: Live Server
+      description: Do you have a live server that can be integrated with your product? If you are unsure, please choose 'No'.
       options:
-        - "Yes"
         - "No"
+        - "Yes"
 
 
