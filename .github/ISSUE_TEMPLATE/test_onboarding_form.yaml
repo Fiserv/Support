@@ -183,10 +183,6 @@ body:
     validations:
       required: true
       
-  - type: markdown
-    attributes:
-      value: <I> If your previous response was "Yes", then please continue by answering the questions below. </I>
-       
   - type: dropdown
     id: runbox
     attributes:
@@ -195,6 +191,10 @@ body:
       options:
         - "Yes"
         - "No"
+        
+  - type: markdown
+    attributes:
+      value: <h4> If your previous response was "Yes", then please continue by answering the questions below. </h4>
       
   - type: markdown
     attributes:
