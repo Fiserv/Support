@@ -187,7 +187,7 @@ body:
     id: runbox
     attributes:
       label: Runbox
-      description: Do you wish to use the RunBox function? If your response is "Yes," please continue by answering the following questions.
+      description: Do you wish to use the RunBox function? 
       options:
         - "Yes"
         - "No"
