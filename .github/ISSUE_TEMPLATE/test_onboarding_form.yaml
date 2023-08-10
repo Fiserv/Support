@@ -207,7 +207,7 @@ body:
     id: mock
     attributes:
       label: Mock Sandbox
-      description:
+      description: Mock Sandbox
       options:
         - "Yes"
         - "No"
@@ -216,7 +216,7 @@ body:
     id: live
     attributes:
       label: Live Server
-      description:
+      description: Live Server
       options:
         - "Yes"
         - "No"
