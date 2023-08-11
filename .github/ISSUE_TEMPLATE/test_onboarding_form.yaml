@@ -130,6 +130,18 @@ body:
        - label: Asia Pacific
     validations:
       required: true
+
+  - type: checkboxes
+    id: channel-type
+    attributes:
+      label: Channel Type
+      description: Choose the channel type for your product.
+      options:
+       - label: OMNI
+       - label: Card Present
+       - label: Card Not Present
+    validations:
+      required: true
        
   - type: textarea
     id: industry
