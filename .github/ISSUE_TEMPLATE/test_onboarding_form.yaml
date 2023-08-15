@@ -42,7 +42,7 @@ body:
       placeholder: https://www.fiserv.com
       
   - type: textarea
-    id: Description-for-External-Link
+    id: Description-for-LoT
     attributes:
       label: Description of your Developer Portal
       description: Describe your Developer Portal in one line ONLY if you have selected 'Link out' as the 'Type of Tenant'.
