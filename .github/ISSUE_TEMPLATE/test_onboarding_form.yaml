@@ -41,6 +41,13 @@ body:
       description: Provide an External link to your Developer Portal ONLY if you have selected 'Link out' as the 'Type of Tenant'.
       placeholder: https://www.fiserv.com
       
+  - type: input
+    id: Description-for-External-Link
+    attributes:
+      label: Description of your product
+      description: Provide a one liner for your Developer Portal.
+      placeholder: Fiserv is a global financial technology company providing solutions for payments, processing, and banking services.
+      
   - type: dropdown
     id: Internal-Tenant
     attributes:
