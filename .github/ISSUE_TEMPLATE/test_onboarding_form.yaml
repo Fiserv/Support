@@ -45,7 +45,7 @@ body:
     id: Description-for-External-Link
     attributes:
       label: Description of your Developer Portal
-      description: Describe your Developer Portal in one line.
+      description: Describe your Developer Portal in one line ONLY if you have selected 'Link out' as the 'Type of Tenant'.
       placeholder: Fiserv is a global financial technology company providing solutions for payments, processing, and banking services.
       
   - type: dropdown
