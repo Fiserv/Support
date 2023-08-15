@@ -41,7 +41,7 @@ body:
       description: Provide an External link to your Developer Portal ONLY if you have selected 'Link out' as the 'Type of Tenant'.
       placeholder: https://www.fiserv.com
       
-  - type: input
+  - type: textarea
     id: Description-for-External-Link
     attributes:
       label: Description of your product
