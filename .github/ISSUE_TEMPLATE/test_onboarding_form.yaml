@@ -44,8 +44,8 @@ body:
   - type: textarea
     id: Description-for-External-Link
     attributes:
-      label: Description of your product
-      description: Provide a one liner for your Developer Portal.
+      label: Description of your Developer Portal
+      description: Describe your Developer Portal in one line.
       placeholder: Fiserv is a global financial technology company providing solutions for payments, processing, and banking services.
       
   - type: dropdown
