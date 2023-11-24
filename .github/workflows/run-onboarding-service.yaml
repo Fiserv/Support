@@ -68,7 +68,7 @@ jobs:
           echo "TENANT="$result >> $GITHUB_OUTPUT          
           echo "Onboarding config writer Ran Successfully....🍏"
           cd ${{ github.workspace }}/service
-          tenant=$(./startup.sh -f '-rthbde')
+          tenant=$(./startup.sh -f '-rthde')
           echo "tenant"
           fi  
       - run: |
@@ -102,3 +102,10 @@ jobs:
           user_email: 'abhishek.singh3@fiserv.com'
           user_name: 'asingh2023'
           commit_message: 'pushing DbScript file remotely'          
+      - name: Applying Branch Protection.....
+        env:
+          GITHUB_AUTH_TOKEN: ${{ secrets.ZIP_GENERATOR_ACTION }}
+        run: |
+          cd ${{ github.workspace }}/service
+          tenant=$(./target/debug/tenant-onboarding -eb)
+          echo "tenant"
