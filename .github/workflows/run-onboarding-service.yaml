@@ -8,7 +8,7 @@ on:
 
 jobs:
   Tenant-Onboarding-Process:
-    if: github.event.label.name == 'temporarily disabling workflow in main'
+    if: github.event.label.name == 'PORT-8749-test'
     runs-on: ubuntu-latest
     steps:
       - name: View issue information
@@ -45,6 +45,8 @@ jobs:
          ls -la             
       - name: Running Tenant Generator.....
         id: build
+        env:
+          GITHUB_AUTH_TOKEN: ${{ secrets.ZIP_GENERATOR_ACTION }}
         run: |
           pwd
           cd ${{github.workspace}}/service/scripts
@@ -66,7 +68,7 @@ jobs:
           echo "TENANT="$result >> $GITHUB_OUTPUT          
           echo "Onboarding config writer Ran Successfully....🍏"
           cd ${{ github.workspace }}/service
-          tenant=$(./startup.sh -f '-rthde')
+          tenant=$(./startup.sh -f '-rthbde')
           echo "tenant"
           fi  
       - run: |
