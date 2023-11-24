@@ -8,11 +8,12 @@ on:
 
 jobs:
   Tenant-Onboarding-Process:
-    if: (echo "${{ github.event.issue.labels }}" | grep -q "Test Label") && github.event.project_column.name == 'Ready'
+    if: github.event.project_column.name == 'Ready'
     runs-on: ubuntu-latest
     steps:
       - name: View issue information
         run: |
+          echo "${{ github.event.issue.labels }}"
           echo "🎉 The job automatically triggered by a ${{ github.event_name }} event."
           echo "Issue title: ${{ github.event.issue.title }}"
           echo "Issue No: ${{ github.event.issue.number }}"
