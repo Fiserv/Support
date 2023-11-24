@@ -2,13 +2,13 @@ name: OnBoarding_Service
 
 on:
   workflow_call:  
-  issues:
+  project_column:
     types:
-      - labeled
+      - moved
 
 jobs:
   Tenant-Onboarding-Process:
-    if: github.event.label.name == 'Onboard New Tenant'
+    if: github.event.label.name == 'Onboard New Tenant' && github.event.project_column.name == 'Ready'
     runs-on: ubuntu-latest
     steps:
       - name: View issue information
@@ -86,8 +86,8 @@ jobs:
           destination_repo: 'Fiserv/${{steps.build.outputs.TENANT}}'
           destination_folder: 'config'
           destination_branch: 'develop'
-          user_email: 'abhishek.singh3@fiserv.com'
-          user_name: 'asingh2023'
+          user_email: 'supriya.nirmale@fiserv.com'
+          user_name: 'sfiserv'
           commit_message: 'pushing tenant json file remotely' 
           
       - name: Pushing DbScript file remotely
@@ -95,12 +95,12 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
         with:
-          source_file: '${{github.workspace}}/service/dbscripts/${{steps.build.outputs.TENANT}}_dev_db_script.js'
+          source_file: '${{github.workspace}}/service/dbscripts/${{steps.build.outputs.TENANT}}.*[.js]'
           destination_repo: 'Fiserv/tenants-data'
-          destination_folder: 'dbscripts'
+          destination_folder: 'dbscripts/${{steps.build.outputs.TENANT}}'
           destination_branch: 'main'
-          user_email: 'abhishek.singh3@fiserv.com'
-          user_name: 'asingh2023'
+          user_email: 'supriya.nirmale@fiserv.com'
+          user_name: 'sfiserv'
           commit_message: 'pushing DbScript file remotely'          
       - name: Applying Branch Protection.....
         env:
