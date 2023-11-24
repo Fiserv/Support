@@ -107,5 +107,5 @@ jobs:
           GITHUB_AUTH_TOKEN: ${{ secrets.ZIP_GENERATOR_ACTION }}
         run: |
           cd ${{ github.workspace }}/service
-          tenant=$(./target/debug/tenant-onboarding -eb)
+          tenant=$(./startup.sh -f '-be')
           echo "tenant"
