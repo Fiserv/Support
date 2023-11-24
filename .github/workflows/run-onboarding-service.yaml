@@ -8,7 +8,7 @@ on:
 
 jobs:
   Tenant-Onboarding-Process:
-    if: github.event.label.name == 'Onboard New Tenant' && github.event.project_column.name == 'Ready'
+    if: (echo "${{ github.event.issue.labels }}" | grep -q "Test Label") && github.event.project_column.name == 'Ready'
     runs-on: ubuntu-latest
     steps:
       - name: View issue information
