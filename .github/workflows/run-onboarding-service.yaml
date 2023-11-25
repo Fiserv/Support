@@ -95,7 +95,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
         with:
-          source_file: '${{github.workspace}}/service/dbscripts/.*[.js]'
+          source_file: '${{github.workspace}}/service/dbscripts/*.js'
           destination_repo: 'Fiserv/tenants-data'
           destination_folder: 'dbscripts/${{steps.build.outputs.TENANT}}'
           destination_branch: 'main'
