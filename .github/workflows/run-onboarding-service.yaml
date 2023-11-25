@@ -2,13 +2,13 @@ name: OnBoarding_Service
 
 on:
   workflow_call:  
-  project_column:
+  project_card:
     types:
       - moved
 
 jobs:
   Tenant-Onboarding-Process:
-    if: github.event.project_column.name == 'Ready'
+    if: github.event.project_card.column_id == 16645093
     runs-on: ubuntu-latest
     steps:
       - name: View issue information
