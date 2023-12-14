@@ -133,8 +133,10 @@ body:
         label: Fintech solution area
         description: Does your product fall under Fintech category?
         options:
-         - "Yes"
-         - "No"
+          - "Yes"
+          - "No"
+    validations:
+      required: true
   - type: checkboxes
     id: region-of-operation
     attributes:
@@ -152,6 +154,7 @@ body:
       description: Do you provide restful APIs for integration
       options:
         - "Yes"
+        - "No"
     validations:
       required: true
   - type: dropdown
