@@ -21,7 +21,7 @@ body:
       placeholder: TENANT-NAME
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: Tenant-Type
     validations:
       required: true
@@ -74,7 +74,7 @@ body:
     id: Internal-Tenant
     attributes:
         label: Internal tenant
-        description: Is this product only for Fiserv's internal use? If not sure, please select 'No'
+        description: Is this product only for Fiserv's internal use (valid user with work email login required on DevStudio portal to view)? If not sure, please select 'No'
         options:
          - "No"
          - "Yes"
@@ -102,8 +102,6 @@ body:
       required: true
   - type: checkboxes
     id: customer-segments-for-merchants
-    validations:
-      required: true
     attributes:
       label: Customer Segments for Merchants
       description: Specify the type of segement. Required if you selected Merchants above.
@@ -122,8 +120,6 @@ body:
       required: true
   - type: checkboxes
     id: customer-segments-for-financial-institutions
-    validations:
-      required: true
     attributes:
       label: Customer Segments for Financial Instituitions
       description: Specify the type of segement. Required if you selected Financial Institutions above.
@@ -139,12 +135,8 @@ body:
         options:
          - "Yes"
          - "No"
-    validations:
-      required: true
   - type: checkboxes
     id: region-of-operation
-    validations:
-      required: true
     attributes:
       label: Region of Operation
       description: Select your product's operational region. 
@@ -218,5 +210,26 @@ body:
       options:
         - "Yes"
         - "No"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        
+        ---
+        
+        A Developer Studio member will validate the settings and update this ticket with relevant information. Please check this ticket for future comments and progress as indicated by the checkboxes below.
+
+  - type: checkboxes
+    id: devstudio-onboard-tasks
+    attributes:
+      label: DevStudio Onboarding Task Tracker
+      description: For Developer Studio member only: Track the progress of this issue. Tasks will update counter at the top of Issue.
+      options:
+        - label: Github repository created
+        - label: Tenant Github team validated and members added
+        - label: Tenant DB script executed
+        - label: Tenant live on QA environment
     validations:
       required: true
