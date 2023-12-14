@@ -29,9 +29,9 @@ body:
       label: Type of Tenant
       description: Specify the type of integration required.
       options:
-      - label: Full service
-      - label: Doc only
-      - label: Link out
+        - "Full service"
+        - "Doc only"
+        - "Link out"
   - type: input
     id: Team-Members
     attributes:
