@@ -187,12 +187,8 @@ body:
   - type: markdown
     attributes:
       value: <h4> Type of Sandbox </h4>
-        
-        
-        
         <I> Please note that the Live sandbox setting overrules mock setting. Developer Studio team will later connect with you to collect Live server connectivity details.
-      
-          If Live sandbox is not ready at your end, Developer Studio will provide a Mock server for your APIs. For that please change the above value of 'Mock' to 'Yes'. </I>
+        If Live sandbox is not ready at your end, Developer Studio will provide a Mock server for your APIs. For that please change the above value of 'Mock' to 'Yes'. </I>
       
   - type: dropdown
     id: mock
@@ -213,25 +209,5 @@ body:
       options:
         - "Yes"
         - "No"
-    validations:
-      required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        
-        ---
-        
-        A Developer Studio member will validate the settings and update this ticket with relevant information. Please check this ticket for future comments and progress as indicated by the checkboxes below.
-  - type: checkboxes
-    id: devstudio-onboard-tasks
-    attributes:
-      label: DevStudio Onboarding Task Tracker
-      description: For Developer Studio member only! Tasks will update counter at the top of Issue as they are checked as completed here.
-      options:
-        - label: Github repository created
-        - label: Tenant Github team validated and members added
-        - label: Tenant DB script executed
-        - label: Tenant live on QA environment
     validations:
       required: true
