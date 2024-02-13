@@ -50,6 +50,8 @@ jobs:
         id: build
         env:
           GITHUB_AUTH_TOKEN: ${{ secrets.ZIP_GENERATOR_ACTION }}
+          STAGE_WEBHOOK_KEY: ${{ secrets.STAGE_WEBHOOK_KEY }}
+          PROD_WEBHOOK_KEY: ${{ secrets.PROD_WEBHOOK_KEY }}
         run: |
           pwd
           cd ${{github.workspace}}/service/scripts
