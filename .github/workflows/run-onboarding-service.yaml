@@ -82,7 +82,7 @@ jobs:
           cd ${{ github.workspace }}/service
           pwd
           ls -la
-      - name: Pushing tenant file remotely
+      - name: Pushing tenant file to develop branch
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
@@ -93,7 +93,31 @@ jobs:
           destination_branch: 'develop'
           user_email: 'supriya.nirmale@fiserv.com'
           user_name: 'sfiserv'
-          commit_message: 'pushing tenant json file remotely' 
+          commit_message: 'pushing tenant json file remotely'
+      - name: Pushing tenant file to stage branch
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
+        with:
+          source_file: '${{github.workspace}}/service/tenant.json'
+          destination_repo: 'Fiserv/${{steps.build.outputs.TENANT}}'
+          destination_folder: 'config'
+          destination_branch: 'stage'
+          user_email: 'supriya.nirmale@fiserv.com'
+          user_name: 'sfiserv'
+          commit_message: 'pushing tenant json file remotely'
+      - name: Pushing tenant file to main branch
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
+        with:
+          source_file: '${{github.workspace}}/service/tenant.json'
+          destination_repo: 'Fiserv/${{steps.build.outputs.TENANT}}'
+          destination_folder: 'config'
+          destination_branch: 'main'
+          user_email: 'supriya.nirmale@fiserv.com'
+          user_name: 'sfiserv'
+          commit_message: 'pushing tenant json file remotely'
       - name: Pushing DbScript file remotely
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
