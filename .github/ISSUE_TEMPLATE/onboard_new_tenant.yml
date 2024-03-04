@@ -194,7 +194,7 @@ body:
     id: mock
     attributes:
       label: Mock Sandbox
-      description:
+      description: Are you planning on writing API spec files to be mocked using Developer Studio's internal mock server (returning mock data based on the request)?
       options:
         - "Yes"
         - "No"
@@ -205,7 +205,8 @@ body:
     id: live
     attributes:
       label: Live Server
-      description:
+      description: Are you planning to provide us with a live sandbox endpoint that is hosted on your own server for customers to run tests against using the APIs specs you provide?
+        Please note that if you do provide a Live Server, we can not mix and match to allow APIs on our mock server as well.
       options:
         - "Yes"
         - "No"
