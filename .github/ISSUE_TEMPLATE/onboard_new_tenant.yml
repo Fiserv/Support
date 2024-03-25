@@ -177,7 +177,7 @@ body:
     id: runbox
     attributes:
       label: Runbox
-      description: Do you want to enable the RunBox feature? If the preceding response is "Yes," continue filling out the below questions
+      description: Do you want to enable the RunBox feature for mocking APIs (Not applicable for `Doc-only` products)? If "Yes", please fill out the questions below.
       options:
         - "Yes"
         - "No"
