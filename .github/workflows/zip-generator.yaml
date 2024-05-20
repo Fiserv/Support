@@ -1,0 +1,11 @@
+name: Studio Zip Generator
+on:
+  push:
+    branches: [ develop,stage,main,preview,previous ]
+    paths:
+      - 'reference/**'
+
+jobs:
+  push_actions:
+    uses: Fiserv/remote-actions/.github/workflows/file-update-service.yaml@main
+    secrets: inherit
