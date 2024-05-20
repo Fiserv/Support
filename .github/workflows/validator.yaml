@@ -1,0 +1,9 @@
+name: Studio Validator
+on:
+  pull_request:
+    branches: [ develop,stage,main,preview,previous ]
+
+jobs:
+  validator:
+    uses: Fiserv/remote-actions/.github/workflows/validator-service.yaml@main
+    secrets: inherit
