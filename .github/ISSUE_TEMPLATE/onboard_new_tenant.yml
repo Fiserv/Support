@@ -108,8 +108,8 @@ body:
       label: Customer Segments for Payments
       description: Specify the type(s) of applicable segment(s). Required if you selected Payments above.
       options:
-      - label: SMB
-      - label: Enterprise
+      - SMB
+      - Enterprise
       multiple: true
   - type: dropdown
     id: capabilities-for-payments
@@ -117,11 +117,11 @@ body:
       label: Capabilities for Payments
       description: Specify the type(s) of capabilities your services provide. Required if you selected Payments above.
       options:
-        - label: Analytics
-        - label: Boarding & Management
-        - label: Disbursements
-        - label: Omni-Channel
-        - label: Value Added Services
+        - Analytics
+        - Boarding & Management
+        - Disbursements
+        - Omni-Channel
+        - Value Added Services
       multiple: true
   - type: dropdown
     id: Product-Areas-Banking
@@ -129,8 +129,8 @@ body:
         label: Banking solution area
         description: Does your product fall under Banking category?
         options:
-         - "Yes"
-         - "No"
+          - "Yes"
+          - "No"
     validations:
       required: true
   - type: dropdown
@@ -149,10 +149,10 @@ body:
       label: Capabilities for Banking
       description: Specify the type(s) of capabalities your services provide. Required if you selected Banking above.
       options:
-        - label: Banking as a Service
-        - label: Financial Data Management
-        - label: Issuing
-        - label: Licensing
+        - Banking as a Service
+        - Financial Data Management
+        - Issuing
+        - Licensing
       multiple: true
   - type: dropdown
     id: Product-Areas-Fintech
@@ -170,10 +170,10 @@ body:
       label: Region of Operation
       description: Select your product's operational region. 
       options:
-        - label: North America
-        - label: EMEA
-        - label: LATAM
-        - label: APAC
+        - North America
+        - EMEA
+        - LATAM
+        - APAC
       multiple: true
   - type: dropdown
     id: runbox
