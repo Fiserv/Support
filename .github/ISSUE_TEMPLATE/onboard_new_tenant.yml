@@ -170,11 +170,11 @@ body:
       label: Region of Operation
       description: Select your product's operational region. 
       options:
-       - label: North America
-       - label: EMEA
-       - label: LATAM
-       - label: APAC
-     multiple: true
+        - label: North America
+        - label: EMEA
+        - label: LATAM
+        - label: APAC
+      multiple: true
   - type: dropdown
     id: runbox
     attributes:
