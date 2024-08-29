@@ -78,8 +78,8 @@ body:
         label: Internal tenant
         description: Is this product only for Fiserv's internal use (valid user with work email login required on DevStudio portal to view)? If not sure, please select 'No'
         options:
-         - No
-         - Yes
+         - "No"
+         - "Yes"
     validations:
       required: true
   - type: dropdown
@@ -88,8 +88,8 @@ body:
         label: Product of Carat
         description: Is this product for Fiserv's Carat Solutions? If not sure, please select 'No'
         options:
-         - No
-         - Yes
+         - "No"
+         - "Yes"
     validations:
       required: true
   - type: dropdown
@@ -98,8 +98,8 @@ body:
         label: Payments solution area
         description: Does you product fall under Payments category?
         options:
-         - Yes
-         - No
+         - "Yes"
+         - "No"
     validations:
       required: true
   - type: dropdown
@@ -129,8 +129,8 @@ body:
         label: Banking solution area
         description: Does your product fall under Banking category?
         options:
-          - Yes
-          - No
+          - "Yes"
+          - "No"
     validations:
       required: true
   - type: dropdown
@@ -160,8 +160,8 @@ body:
         label: Fintech solution area
         description: Does your product fall under Fintech category?
         options:
-          - Yes
-          - No
+          - "Yes"
+          - "No"
     validations:
       required: true
   - type: dropdown
@@ -181,8 +181,8 @@ body:
       label: Runbox
       description: Do you want to enable the RunBox feature for mocking APIs (Not applicable for `Doc-only` products)? If "Yes", please fill out the questions below.
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
       
@@ -198,8 +198,8 @@ body:
       label: Mock Sandbox
       description: Are you planning on writing API spec files to be mocked using Developer Studio's internal mock server (returning mock data based on the request)?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
         
