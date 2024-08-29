@@ -106,7 +106,7 @@ body:
     id: customer-segments-for-payments
     attributes:
       label: Customer Segments for Payments
-      description: Specify the type of segment. Required if you selected Payments above.
+      description: Specify the type(s) of applicable segment(s). Required if you selected Payments above.
       options:
       - label: SMB
       - label: Enterprise
@@ -115,7 +115,7 @@ body:
     id: capabilities-for-payments
     attributes:
       label: Capabilities for Payments
-      description: Specify the type of capabilities your services provide. Required if you selected Payments above.
+      description: Specify the type(s) of capabilities your services provide. Required if you selected Payments above.
       options:
         - label: Analytics
         - label: Boarding & Management
@@ -137,7 +137,7 @@ body:
     id: customer-segments-for-banking
     attributes:
       label: Customer Segments for Banking
-      description: Specify the type of segment. Required if you selected Banking above.
+      description: Specify the type(s) of applicable segment(s). Required if you selected Banking above.
       options:
         - label: Bank
         - label: Credit Union
@@ -147,7 +147,7 @@ body:
     id: capabilities-for-banking
     attributes:
       label: Capabilities for Banking
-      description: Specify the type of capabalities your services provide. Required if you selected Banking above.
+      description: Specify the type(s) of capabalities your services provide. Required if you selected Banking above.
       options:
         - label: Banking as a Service
         - label: Financial Data Management
