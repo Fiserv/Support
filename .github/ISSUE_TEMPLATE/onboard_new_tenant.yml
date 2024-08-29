@@ -225,5 +225,5 @@ body:
     id: contact-sales-person
     attributes:
       label: Sales Contact Information
-      description: Name and email of your sales contact.
+      description: If yes, please provide the name and email of your sales contact.
       placeholder: "Leeroy Jenkins (leeroy.jenkins@fiserv.com)"
