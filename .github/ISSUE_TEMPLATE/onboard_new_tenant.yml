@@ -102,7 +102,7 @@ body:
          - "No"
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: customer-segments-for-payments
     attributes:
       label: Customer Segments for Payments
@@ -110,7 +110,8 @@ body:
       options:
       - label: SMB
       - label: Enterprise
-  - type: checkboxes
+      multiple: true
+  - type: dropdown
     id: capabilities-for-payments
     attributes:
       label: Capabilities for Payments
@@ -121,6 +122,7 @@ body:
         - label: Disbursements
         - label: Omni-Channel
         - label: Value Added Services
+      multiple: true
   - type: dropdown
     id: Product-Areas-Banking
     attributes:
@@ -131,7 +133,7 @@ body:
          - "No"
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: customer-segments-for-banking
     attributes:
       label: Customer Segments for Banking
@@ -140,7 +142,8 @@ body:
         - label: Bank
         - label: Credit Union
         - label: Large Financial Institution
-  - type: checkboxes
+      multiple: true
+  - type: dropdown
     id: capabilities-for-banking
     attributes:
       label: Capabilities for Banking
@@ -150,6 +153,7 @@ body:
         - label: Financial Data Management
         - label: Issuing
         - label: Licensing
+      multiple: true
   - type: dropdown
     id: Product-Areas-Fintech
     attributes:
@@ -160,7 +164,7 @@ body:
           - "No"
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: region-of-operation
     attributes:
       label: Region of Operation
@@ -170,6 +174,7 @@ body:
        - label: EMEA
        - label: LATAM
        - label: APAC
+     multiple: true
   - type: dropdown
     id: runbox
     attributes:
