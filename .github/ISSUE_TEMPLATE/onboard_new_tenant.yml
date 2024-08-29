@@ -4,7 +4,9 @@ description: New tenant onboarding
 title: Onboard a new tenant
 labels:
   - Onboard New Tenant
-assignees: sfiserv
+assignees:
+  - russnicoletti
+  - minh-pham1
 body:
   - type: markdown
     attributes:
@@ -91,42 +93,63 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: Product-Areas-Merchants
+    id: Product-Areas-Payments
     attributes:
-        label: Merchants solution area
-        description: Does you product fall under Merchants category?
+        label: Payments solution area
+        description: Does you product fall under Payments category?
         options:
          - "Yes"
          - "No"
     validations:
       required: true
   - type: checkboxes
-    id: customer-segments-for-merchants
+    id: customer-segments-for-payments
     attributes:
-      label: Customer Segments for Merchants
-      description: Specify the type of segement. Required if you selected Merchants above.
+      label: Customer Segments for Payments
+      description: Specify the type of segment. Required if you selected Payments above.
       options:
       - label: SMB
       - label: Enterprise
-  - type: dropdown
-    id: Product-Areas-Financial-Institutions
+  - type: checkboxes
+    id: capabilities-for-payments
     attributes:
-        label: Financial Institutions solution area
-        description: Does your product fall under Financial Institutions category?
+      label: Capabilities for Payments
+      description: Specify the type of capabilities your services provide. Required if you selected Payments above.
+      options:
+        - label: Analytics
+        - label: Boarding & Management
+        - label: Disbursements
+        - label: Omni-Channel
+        - label: Value Added Services
+  - type: dropdown
+    id: Product-Areas-Banking
+    attributes:
+        label: Banking solution area
+        description: Does your product fall under Banking category?
         options:
          - "Yes"
          - "No"
     validations:
       required: true
   - type: checkboxes
-    id: customer-segments-for-financial-institutions
+    id: customer-segments-for-banking
     attributes:
-      label: Customer Segments for Financial Instituitions
-      description: Specify the type of segement. Required if you selected Financial Institutions above.
+      label: Customer Segments for Banking
+      description: Specify the type of segment. Required if you selected Banking above.
       options:
-       - label: Bank
-       - label: Credit Union
-       - label: Large Financial Institution
+        - label: Bank
+        - label: Credit Union
+        - label: Large Financial Institution
+  - type: checkboxes
+    id: capabilities-for-banking
+    attributes:
+      label: Capabilities for Banking
+      description: Specify the type of capabalities your services provide. Required if you selected Banking above.
+      options:
+        - label: Banking as a Service
+        - label: Financial Data Management
+        - label: Issuing
+        - label: Licensing
   - type: dropdown
     id: Product-Areas-Fintech
     attributes:
@@ -147,32 +170,6 @@ body:
        - label: EMEA
        - label: LATAM
        - label: APAC
-  - type: dropdown
-    id: integration-restful
-    attributes:
-      label: RESTful
-      description: Do you provide restful APIs for integration
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
-  - type: dropdown
-    id: integration-sdk
-    attributes:
-      label: SDK
-      description: Do you provide SDKs for integration
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
-  - type: textarea
-    id: industry
-    attributes:
-      label: Industry
-      description: Which sectors of industry does your product serve? You may only list up to five different industries. 
-      placeholder: "Examples: Retail, Banking, Petroleum, Airline, Manufacturing"
   - type: dropdown
     id: runbox
     attributes:
@@ -212,3 +209,21 @@ body:
         - "No"
     validations:
       required: true
+
+  - type: dropdown
+    id: contact-sales
+    attributes:
+      label: Sales Contact
+      description: Do you want to provide a contact for sales purposes?
+      options:
+        - "Yes"
+        - "No"
+      default: "No"
+    validations:
+      required: true
+  - type: textarea
+    id: contact-sales-person
+    attributes:
+      label: Sales Contact Information
+      description: Name and email of your sales contact.
+      placeholder: "Leeroy Jenkins (leeroy.jenkins@fiserv.com)"
