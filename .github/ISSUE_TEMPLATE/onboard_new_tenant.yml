@@ -139,9 +139,9 @@ body:
       label: Customer Segments for Banking
       description: Specify the type(s) of applicable segment(s). Required if you selected Banking above.
       options:
-        - label: Bank
-        - label: Credit Union
-        - label: Large Financial Institution
+        - Bank
+        - Credit Union
+        - Large Financial Institution
       multiple: true
   - type: dropdown
     id: capabilities-for-banking
