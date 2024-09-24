@@ -23,6 +23,14 @@ body:
       placeholder: TENANT-NAME
     validations:
       required: true
+  - type: input
+    id: Description-Of-Product
+    attributes:
+      label: Short Description of Tenant
+      description: Provide a short description of the product. Limit 112 characters.
+      placeholder: This is a short description with less than 112 characters of the product.
+    validations:
+      required: true
   - type: dropdown
     id: Tenant-Type
     validations:
