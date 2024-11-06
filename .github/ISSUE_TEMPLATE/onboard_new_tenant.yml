@@ -195,7 +195,7 @@ body:
       options:
         - "Developer Studio Prism Server"
         - "Tenant Provided Sandbox Environment"
-        - "None"
+        - "N/A"
     validations:
       required: true
 
