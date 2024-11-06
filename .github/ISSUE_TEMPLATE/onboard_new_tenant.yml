@@ -182,9 +182,9 @@ body:
   - type: markdown
     attributes:
       value: <h4> API Mock Sandbox </h4>
-        <I> Details regarding API sandbox if your product is Full Service with API specs and would like for user to have a playground to test mock calls/payloads.
-        You may request to change sandbox type at a later date with a separate Github Issue request.
-        If you are a doc-only tenant, please select `None`</I>
+        <I>Details regarding API sandbox if your product is Full Service with API specs and would like for user to have a playground to test mock calls/payloads.</I></br>
+        <I>You may request to change sandbox type at a later date with a separate Github Issue request.</I></br>
+        <I>If you are a doc-only tenant, please select `None`</I>
       
   - type: dropdown
     id: mock
