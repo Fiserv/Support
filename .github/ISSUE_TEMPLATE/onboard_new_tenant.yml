@@ -175,9 +175,11 @@ body:
       options:
         - North America
         - EMEA
-        - LATAM
-        - APAC
+        - Latin America
+        - Asia Pacific
       multiple: true
+    validations:
+      required: true
       
   - type: markdown
     attributes:
