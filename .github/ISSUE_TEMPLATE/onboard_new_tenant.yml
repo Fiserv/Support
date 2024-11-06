@@ -37,7 +37,12 @@ body:
       required: true
     attributes:
       label: Type of Tenant
-      description: Specify the type of integration required.
+      description: |
+        Specify the type of integration required.
+
+        - Full service: Developer Studio product with both documentation and API specs
+        - Doc only: Developer Studio product with only markdown documentation
+        - Link out: Listed under Developer Studio catalog with link redirecting to tenant provided website
       options:
         - "Full service"
         - "Doc only"
@@ -163,16 +168,6 @@ body:
         - Licensing
       multiple: true
   - type: dropdown
-    id: Product-Areas-Fintech
-    attributes:
-        label: Fintech solution area
-        description: Does your product fall under Fintech category?
-        options:
-          - "Yes"
-          - "No"
-    validations:
-      required: true
-  - type: dropdown
     id: region-of-operation
     attributes:
       label: Region of Operation
@@ -183,43 +178,24 @@ body:
         - LATAM
         - APAC
       multiple: true
-  - type: dropdown
-    id: runbox
-    attributes:
-      label: Runbox
-      description: Do you want to enable the RunBox feature for mocking APIs (Not applicable for `Doc-only` products)? If "Yes", please fill out the questions below.
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
       
   - type: markdown
     attributes:
-      value: <h4> Type of Sandbox </h4>
-        <I> Please note that the Live sandbox setting overrules mock setting. Developer Studio team will later connect with you to collect Live server connectivity details.
-        If Live sandbox is not ready at your end, Developer Studio will provide a Mock server for your APIs. For that please change the above value of 'Mock' to 'Yes'. </I>
+      value: <h4> API Mock Sandbox </h4>
+        <I> Details regarding API sandbox if your product is Full Service with API specs and would like for user to have a playground to test mock calls/payloads.
+        You may request to change sandbox type at a later date with a separate Github Issue request.
+        If you are a doc-only tenant, please select `None`</I>
       
   - type: dropdown
     id: mock
     attributes:
       label: Mock Sandbox
-      description: Are you planning on writing API spec files to be mocked using Developer Studio's internal mock server (returning mock data based on the request)?
+      description: |
+        Are you planning on writing API spec files to be mocked using Developer Studio's internal mock server (returning mock data based on the request)?
       options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
-        
-  - type: dropdown
-    id: live
-    attributes:
-      label: Live Server
-      description: Are you planning to provide us with a live sandbox endpoint that is hosted on your own server for customers to run tests against using the APIs specs you provide?
-        Please note that if you do provide a Live Server, we can not mix and match to allow APIs on our mock server as well.
-      options:
-        - "Yes"
-        - "No"
+        - "Developer Studio Prism Server"
+        - "Tenant Provided Sandbox Environment"
+        - "None"
     validations:
       required: true
 
