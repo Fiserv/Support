@@ -131,10 +131,10 @@ body:
       description: Specify the type(s) of capabilities your services provide. Required if you selected Payments above.
       options:
         - Analytics
-        - Boarding & Management
+        - Boarding & management
         - Disbursements
-        - Omni-Channel
-        - Value Added Services
+        - Omni-channel
+        - Value added services
       multiple: true
   - type: dropdown
     id: Product-Areas-Banking
@@ -153,8 +153,8 @@ body:
       description: Specify the type(s) of applicable segment(s). Required if you selected Banking above.
       options:
         - Bank
-        - Credit Union
-        - Large Financial Institution
+        - Credit union
+        - Large financial institution
       multiple: true
   - type: dropdown
     id: capabilities-for-banking
@@ -162,8 +162,8 @@ body:
       label: Capabilities for Banking
       description: Specify the type(s) of capabalities your services provide. Required if you selected Banking above.
       options:
-        - Banking as a Service
-        - Financial Data Management
+        - Banking-as-a-service
+        - Financial data management
         - Issuing
         - Licensing
       multiple: true
