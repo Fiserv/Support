@@ -1,0 +1,9 @@
+name: Zip Generator Cleanup
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  post-merge-actions:
+    uses: Fiserv/remote-actions/.github/workflows/post-merge-actions.yaml@main
+    secrets: inherit
