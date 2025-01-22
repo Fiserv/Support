@@ -27,11 +27,12 @@ jobs:
          pwd
          ls -la
       - name: Checkout /Fiserv/tenant-onboarding Repo at ${{ github.workspace }}/service
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
          repository: Fiserv/tenant-onboarding
          ref: develop
          path: ${{ github.workspace }}/service
+         token: ${{ secrets.ZIP_GENERATOR_ACTION }}
       - name: List files in the repository
         run: |
          cd ${{ github.workspace }}
