@@ -31,6 +31,20 @@ body:
       placeholder: This is a short description with less than 112 characters of the product.
     validations:
       required: true
+  - type: input
+    id: apim-id
+    attributes:
+      label: APIM ID
+      description: Provide your product APIM ID as registered with Fiserv
+      placeholder: APM000####
+    validations:
+      required: true
+  - type: input
+    id: fqdn
+    attributes:
+      label: Fully Qualified Domain Name
+      description: Provide the domain name registered for your production API server/endpoints.
+      placeholder: https://api.test.com/
   - type: dropdown
     id: Tenant-Type
     validations:
