@@ -188,7 +188,7 @@ body:
       description: Select your product's operational region. 
       options:
         - North America
-        - Europe, the Middle East, and Africa
+        - EMEA
         - Latin America
         - Asia Pacific
       multiple: true
