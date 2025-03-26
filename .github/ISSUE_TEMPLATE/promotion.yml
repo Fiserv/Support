@@ -1,0 +1,78 @@
+---
+name: Promoting a tenant
+description: Form for requesting a promotion to upper environments
+title: Promoting a tenant
+labels:
+  - Promotion
+assignees:
+  - russnicoletti
+  - minh-pham1
+body:
+  - type: markdown
+    attributes:
+      value: |
+        
+        ---
+        Thank you for your interest in promoting your product to our production environment for use by customers worldwide! Here are some checklist items and additional information needed to get the process started.
+  - type: input
+    id: Name-Of-Product
+    attributes:
+      label: Name of your product / tenant
+      description: Provide the name of the product being promoted.
+      placeholder: TENANT-NAME
+    validations:
+      required: true
+  - type: input
+    id: apim-id
+    attributes:
+      label: APIM ID
+      description: Provide your product APIM ID as registered with Fiserv
+      placeholder: APM000####
+    validations:
+      required: true
+  - type: input
+    id: fqdn
+    attributes:
+      label: Fully Qualified Domain Name
+      description: Provide the domain name registered for your production API server/endpoints.
+      placeholder: https://api.test.com/
+  - type: input
+    id: client-360
+    attributes:
+      label: Client 360 Assignment Group
+      description: Provide the Client 360 Assignment Group responsible for answering customer inquiries coming through Developer Studio.
+      placeholder: DCOM.1.TenantName-Support
+    validations:
+      required: true
+  - type: dropdown
+    id: contact-sales
+    attributes:
+      label: Sales Contact
+      description: Do you want to provide a contact for sales purposes?
+      options:
+        - "Yes"
+        - "No"
+      default: 1
+    validations:
+      required: true
+  - type: textarea
+    id: contact-sales-person
+    attributes:
+      label: Sales Contact Information
+      description: If yes, please provide the Client 360 assignment group OR the name and email of your sales contact.
+      placeholder: DCOM.1.TenantName-Sales
+
+  - type: checkboxes
+    attributes:
+      label: "Prerequisite Checklist"
+      options:
+        - label: "Product layout and configurations are complete and accurate (tags, descriptions, spec files)."
+          required: true
+        - label: "All product documentation is up-to-date, including release notes for each API version."
+          required: true
+        - label: "APIs have been validated using Developer Studio's tools, and sandbox requests work as expected."
+          required: true
+        - label: "Mock APIs and documentation flows have been read through and validated."
+          required: true
+        - label: "`develop`, `stage`, and `main` branch on Github are up-to-date with all the above documents and configurations."
+          required: true
