@@ -3,7 +3,9 @@ name: Promoting a tenant
 description: Form for requesting a promotion to upper environments
 title: Promoting a tenant
 labels:
-  - Promotion
+  - enhancement
+type:
+  - Feature
 assignees:
   - russnicoletti
   - minh-pham1
