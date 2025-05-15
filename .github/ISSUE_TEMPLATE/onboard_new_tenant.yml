@@ -65,7 +65,7 @@ body:
     id: Team-Members
     attributes:
       label: Team Members
-      description: Provide the GitHub usernames registered with Fiserv email address.
+      description: Provide the GitHub usernames or email for team member(s) needing access to maintain the repository.
       placeholder: tonyStark01, wanda01
     validations:
       required: true
