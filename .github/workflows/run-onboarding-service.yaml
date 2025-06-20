@@ -8,7 +8,7 @@ on:
 
 jobs:
   Tenant-Onboarding-Process:
-    if: github.event.label.name == 'Approved'
+    if: github.event.label.name == 'Validated' || github.event.label.name == 'Approved'
     runs-on: ubuntu-latest
     steps:
       - name: View issue information
@@ -74,9 +74,14 @@ jobs:
           echo "TENANT="$result >> $GITHUB_OUTPUT          
           echo "Onboarding config writer Ran Successfully....🍏"
           cd ${{ github.workspace }}/service
-          tenant=$(./startup.sh -f '-rthde')
+          if [[ "${{ github.event.label.name }}" == "Validated" ]]; then
+            tenant=$(./startup.sh -f '-de')
+          elif [[ "${{ github.event.label.name }}" == "Approved" ]]; then
+            tenant=$(./startup.sh -f '-rthe')
+          else
+            tenant=$(./startup.sh -f '-rthde')
+          fi
           echo "tenant"
-          fi  
       - run: |
           echo "🍏 This job's status is ${{ job.status }}."
           pwd
@@ -84,6 +89,7 @@ jobs:
           pwd
           ls -la
       - name: Pushing tenant file to develop branch
+        if: github.event.label.name == 'Approved'
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
@@ -96,6 +102,7 @@ jobs:
           user_name: 'sfiserv'
           commit_message: 'pushing tenant json file remotely'
       - name: Pushing tenant file to stage branch
+        if: github.event.label.name == 'Approved'
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
@@ -108,6 +115,7 @@ jobs:
           user_name: 'sfiserv'
           commit_message: 'pushing tenant json file remotely'
       - name: Pushing tenant file to main branch
+        if: github.event.label.name == 'Approved'
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
@@ -120,6 +128,7 @@ jobs:
           user_name: 'sfiserv'
           commit_message: 'pushing tenant json file remotely'
       - name: Pushing DbScript file remotely
+        if: github.event.label.name == 'Validated'
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
@@ -132,7 +141,7 @@ jobs:
           user_name: 'sfiserv'
           commit_message: 'pushing DbScript file remotely'          
       - name: Applying Branch Protection.....
-        if: '!cancelled()'
+        if: github.event.label.name == 'Approved' && !cancelled()
         env:
           GITHUB_AUTH_TOKEN: ${{ secrets.ZIP_GENERATOR_ACTION }}
         run: |
