@@ -68,10 +68,11 @@ jobs:
           echo "********** TENANT CONFIGURATION *********************"
           echo "$result"
           if [[ $result == *'FAILED'* ]] ;then
-          echo "Onboarding config writer failed and exiting the Job..."
-          exit 1
+            echo "Onboarding config writer failed and exiting the Job..."
+            exit 1
           else
-          echo "TENANT="$result >> $GITHUB_OUTPUT          
+            echo "TENANT="$result >> $GITHUB_OUTPUT   
+          fi
           echo "Onboarding config writer Ran Successfully....🍏"
           cd ${{ github.workspace }}/service
           if [[ "${{ github.event.label.name }}" == "Validated" ]]; then
