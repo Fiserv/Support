@@ -54,7 +54,6 @@ jobs:
           STAGE_WEBHOOK_KEY: ${{ secrets.STAGE_WEBHOOK_KEY }}
           PROD_WEBHOOK_KEY: ${{ secrets.PROD_WEBHOOK_KEY }}
         run: |
-          pwd
           cd ${{github.workspace}}/service/scripts
           ls -la
           npmv=$(npm --version)
@@ -65,15 +64,18 @@ jobs:
           echo " Repo: ${{ github.repository }}"
           echo " Space: ${{ github.workspace }}"
           result=$(node service.js ${{ github.event.issue.number }})
+
           echo "********** TENANT CONFIGURATION *********************"
           echo "$result"
           if [[ $result == *'FAILED'* ]] ;then
-          echo "Onboarding config writer failed and exiting the Job..."
-          exit 1
-          else
-          echo "TENANT="$result >> $GITHUB_OUTPUT          
+            echo "Onboarding config writer failed and exiting the Job..."
+            exit 1
+          fi
+
+          echo "TENANT="$result >> $GITHUB_OUTPUT   
           echo "Onboarding config writer Ran Successfully....🍏"
           cd ${{ github.workspace }}/service
+
           if [[ "${{ github.event.label.name }}" == "Validated" ]]; then
             tenant=$(./startup.sh -f '-de')
           elif [[ "${{ github.event.label.name }}" == "Approved" ]]; then
