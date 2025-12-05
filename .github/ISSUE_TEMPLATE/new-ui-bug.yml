@@ -1,0 +1,46 @@
+name: 🐞 Bug report
+description: File a bug report
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a bug report, please search for the behaviour in the existing issues. 
+        
+        If this is related to Banking Hub, please contact them directly at appmarketsupport@fiserv.com.
+        
+        ---
+        
+        Thank you for taking the time to file a bug report. To address this bug as fast as possible, we need some information.
+  - type: input
+    id: product
+    attributes:
+      label: Product
+      description: "Is this bug related to or for a specific product on Developer Studio?"
+      placeholder: "e.g. Commerce Hub, Banking Hub, etc."
+    validations:
+      required: false
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: "On which page do you see the bug?"
+      placeholder: "e.g. Account -> Data & Privacy"
+    validations:
+      required: true
+  - type: textarea
+    id: desc
+    attributes:
+      label: Description
+      description: "Please describe the bug and how to reproduce it. Attach screenshots if applicable."
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      description: "Which browser do you use? Please provide the version as well."
+      placeholder: "e.g. Google Chrome 113.0.5672.92"
+    validations:
+      required: true
