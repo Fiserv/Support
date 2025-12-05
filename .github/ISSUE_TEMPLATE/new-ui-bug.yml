@@ -1,5 +1,5 @@
-name: 🐞 Bug report
-description: File a bug report
+name: 🐞 New UI bug report
+description: File a bug report for new new UI
 labels:
   - bug
 body:
