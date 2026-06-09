@@ -1,7 +1,5 @@
 name: Gated content access group request
-description: |
-  Request for a new gated content access group to be created OR to add/remove members from existing access group(s) for a specific product.
-  Developer Studio [guide regarding Gated Content](https://developer.fiserv.com/product/TenantSupport/docs/configurations/how-to-use-gated-content.md) which requires a Fiserv email DevStudio user account.
+description: Request for a new gated content access group to be created OR to add/remove members from existing access group(s) for a specific product. Developer Studio [guide regarding Gated Content](https://developer.fiserv.com/product/TenantSupport/docs/configurations/how-to-use-gated-content.md) which requires a Fiserv email DevStudio user account.
 labels:
   - gated-content
   - tenant-management
