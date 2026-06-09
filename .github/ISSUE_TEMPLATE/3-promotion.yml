@@ -3,7 +3,7 @@ name: Promoting a tenant
 description: Form for requesting a promotion to upper environments
 title: Promoting a tenant
 labels:
-  - Feature
+  - tenant-management
   - enhancement
 assignees:
   - russnicoletti
