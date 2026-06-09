@@ -1,0 +1,53 @@
+name: Revoke user access to gated content
+description: Request to revoke user access to gated content for a specific product and access group.
+labels:
+  - gated-content
+  - tenant-management
+assignees:
+  - sfiserv
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        This form is to request the removal of one or more users from a gated content access group.
+        If you need to remove multiple different groups from multiple users, please submit this form multiple times with the specific user and group(s) information for each request.
+        This is a special change that requires Developer Studio engineer to create database change to our backend to the `users` collection.
+        Please note that this revokation will generally take 4 weeks to occur due to the nature of our database and development cycle.
+        If a more expedited revokation is needed, please let us know in the comments of the Github Issue and we can validate the urgency and escalate to our manager for decision and approval.
+        
+        For more information, please review the [Developer Studio guide regarding Gated Content](https://developer.fiserv.com/product/TenantSupport/docs/configurations/how-to-use-gated-content.md).
+        This guide will require you to sign in with a Fiserv email DevStudio user account to access.
+  - type: input
+    id: product
+    attributes:
+      label: Product name
+      description: "The name of the product for which you are requesting to revoke user access."
+      placeholder: "Product name. e.g. DeveloperStudioTenantSupport"
+    validations:
+      required: true
+  - type: textarea
+    id: group
+    attributes:
+      label: Group name
+      description: "The name of the gated content access group that should be removed. For multiple, please create a bullet point list."
+      placeholder: "- DS_CARD_CUSTOMER"
+    validations:
+      required: true
+  - type: input
+    id: approver
+    attributes:
+      label: Admin name and email
+      description: "Name and email of admin of access group requesting this change."
+      placeholder: "John Doe (john.doe@fiserv.com)"
+    validations:
+      required: true
+  - type: textarea
+    id: users
+    attributes:
+      label: Users to remove access from
+      description: "Please add a bullet point list of user names(if applicable) and emails to be removed from the gated content access group(s)."
+      placeholder: "- Jane Doe (jane.doe@test.com)"
+    validations:
+      required: true

@@ -1,0 +1,49 @@
+name: Gated content access group request
+description: |
+  Request for a new gated content access group to be created OR to add/remove members from existing access group(s) for a specific product.
+  Developer Studio [guide regarding Gated Content](https://developer.fiserv.com/product/TenantSupport/docs/configurations/how-to-use-gated-content.md) which requires a Fiserv email DevStudio user account.
+labels:
+  - gated-content
+  - tenant-management
+assignees:
+  - sfiserv
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        This form is to request for a new gated content access group to be created OR to add/remove members from existing access group(s) for a specific product.
+        This is a special change that requires Developer Studio engineer to create database change to our backend in addition to changes you, the product owner, needs to make to your Github `config/` file(s).
+        For more information, please review the [Developer Studio guide regarding Gated Content](https://developer.fiserv.com/product/TenantSupport/docs/configurations/how-to-use-gated-content.md).
+        This guide will require you to sign in with a Fiserv email DevStudio user account to access.
+  - type: input
+    id: product
+    attributes:
+      label: Product name
+      description: "The name of the product for which you are requesting a new gated content access group."
+      placeholder: "Product name. e.g. DeveloperStudioTenantSupport"
+    validations:
+      required: true
+  - type: input
+    id: context
+    attributes:
+      label: Group name
+      description: "The name of the gated content access group you are requesting. For add/remove member of multiple groups, please use comma to separate group names."
+      placeholder: "Group name, e.g. DS_CARD_CUSTOMER"
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: Description
+      description: "Optional brief description of group for our awareness and analytics"
+      placeholder: "Short description"
+  - type: textarea
+    id: members
+    attributes:
+      label: Members to add
+      description: "Please add a bullet point list of admin names and emails to be added/removed to the gated content access group(s). These users must create Developer Studio accounts for all environments for validation (qa, stage, and production)."
+      placeholder: "- John Doe (john.doe@fiserv.com)"
+    validations:
+      required: true

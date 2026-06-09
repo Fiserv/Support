@@ -2,6 +2,8 @@ name: ✅ Feature/enhancement request
 description: Suggest an idea for Developer Studio or request a change to your product
 labels:
   - enhancement
+assignees:
+  - sfiserv
 body:
   - type: textarea
     id: context

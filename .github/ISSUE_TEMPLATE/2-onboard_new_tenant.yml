@@ -3,17 +3,18 @@ name: Onboard a new tenant
 description: New tenant onboarding
 title: Onboard a new tenant
 labels:
-  - Onboard New Tenant
+  - tenant-management
+  - feature
 assignees:
   - sfiserv
 body:
   - type: markdown
     attributes:
-      value: |
-        
+      value: |    
         ---
         
-        Thank you for taking the time to submit the Tenant Onboarding form. To seemlessly onboard you, we need some information. Kindly review our onboarding documents before submitting this form - https://fiserv.gitbook.io/tenant-docs/ for common questions.
+        Thank you for taking the time to submit the Tenant Onboarding form. To seemlessly onboard you, we need some information.
+        Kindly review our [onboarding documents](https://developer.fiserv.com/product/TenantSupport/docs/tenant-info/tenant-basics.md) before submitting this form.
   - type: input
     id: Name-Of-Product
     attributes:

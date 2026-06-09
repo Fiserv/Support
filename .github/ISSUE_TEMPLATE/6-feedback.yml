@@ -2,6 +2,8 @@ name: 🎙️ Feedback
 description: Provide feedback for this project
 labels:
   - feedback
+assignees:
+  - sfiserv
 body:
   - type: textarea
     id: feedback
@@ -14,6 +16,6 @@ body:
     id: region
     attributes:
       label: Region
-      description: "What is the region this bug happens in?"
+      description: "What region is this feedback related to?"
     validations:
       required: false
