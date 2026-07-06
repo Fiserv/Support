@@ -40,7 +40,7 @@ body:
   - type: textarea
     id: members
     attributes:
-      label: Members to add
+      label: Admins to add
       description: "Please add a bullet point list of admin names and emails to be added/removed to the gated content access group(s). These users must create Developer Studio accounts for all environments for validation (qa, stage, and production)."
       placeholder: "- John Doe (john.doe@fiserv.com)"
     validations:
