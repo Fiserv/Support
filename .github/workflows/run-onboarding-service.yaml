@@ -103,6 +103,9 @@ jobs:
           user_email: 'supriya.nirmale@fiserv.com'
           user_name: 'sfiserv'
           commit_message: 'pushing tenant json file remotely'
+      - name: Wait 10 seconds before pushing to stage branch
+        if: github.event.label.name == 'Approved'
+        run: sleep 10
       - name: Pushing tenant file to stage branch
         if: github.event.label.name == 'Approved'
         uses: dmnemec/copy_file_to_another_repo_action@main
@@ -116,19 +119,22 @@ jobs:
           user_email: 'supriya.nirmale@fiserv.com'
           user_name: 'sfiserv'
           commit_message: 'pushing tenant json file remotely'
+      - name: Wait 10 seconds before pushing to main branch
+        if: github.event.label.name == 'Approved'
+        run: sleep 10
       - name: Pushing tenant file to main branch
         if: github.event.label.name == 'Approved'
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.ZIP_GENERATOR_ACTION }}
         with:
-          source_file: '${{github.workspace}}/service/tenant.json'
-          destination_repo: 'Fiserv/${{steps.build.outputs.TENANT}}'
-          destination_folder: 'config'
-          destination_branch: 'main'
-          user_email: 'supriya.nirmale@fiserv.com'
-          user_name: 'sfiserv'
-          commit_message: 'pushing tenant json file remotely'
+         source_file: '${{github.workspace}}/service/tenant.json'
+         destination_repo: 'Fiserv/${{steps.build.outputs.TENANT}}'
+         destination_folder: 'config'
+         destination_branch: 'main'
+         user_email: 'supriya.nirmale@fiserv.com'
+         user_name: 'sfiserv'
+         commit_message: 'pushing tenant json file remotely'
       - name: Pushing DbScript file remotely
         if: github.event.label.name == 'Validated'
         uses: dmnemec/copy_file_to_another_repo_action@main
