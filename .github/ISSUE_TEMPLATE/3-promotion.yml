@@ -6,8 +6,7 @@ labels:
   - tenant-management
   - enhancement
 assignees:
-  - russnicoletti
-  - minh-pham1
+  - sfiserv
 body:
   - type: markdown
     attributes:
